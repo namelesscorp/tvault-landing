@@ -1,0 +1,101 @@
+{
+	"HomePage": {
+		"header": {
+			"about": "About",
+			"versions": "Versions",
+			"plans": "Plans",
+			"download": "Download"
+		},
+		"main": {
+			"title": "Store and transmit data with confidence",
+			"text": "Create reliable encrypted containers, distribute access with ease, and securely transfer data without risk.",
+			"download": {
+				"title": "Download",
+				"text": "Download and try the fully free single version"
+			},
+			"roadmap": {
+				"title": "Roadmap",
+				"text": "Discover the future potential of the product"
+			}
+		},
+		"about": {
+			"title": "About the product",
+			"text": "Trust Vault is your personal data safe, designed with security, privacy, and convenience in mind. We’ve combined cutting-edge encryption technologies with a flexible approach to access management, so you can store and share data without fear of leaks.",
+			"for": {
+				"title": "Who We Built This For?",
+				"1": "Teams working with sensitive information",
+				"2": "Professionals from various fields",
+				"3": "Families who want to share important documents",
+				"4": "Anyone tired of trusting their data to cloud giants"
+			},
+			"cards": {
+				"1": "Our project is open source",
+				"2": "Multi-access control: Shamir’s Secret Sharing",
+				"3": "Strong encryption: AES-256",
+				"4": "Completely free single version"
+			},
+			"badges": {
+				"1": "IT",
+				"2": "TEAM",
+				"3": "FAMILY",
+				"4": "COMPANy",
+				"5": "Professional",
+				"6": "Trust"
+			}
+		},
+		"versions": {
+			"title": "Versions",
+			"single": {
+				"title": "SINGLE",
+				"text": "Perfect for personal use or small teams. Secure your data fully — no sign-ups, no subscriptions, no limits."
+			},
+			"enterprise": {
+				"title": "ENTERPRISE",
+				"text": "Full control and compliance. Deploy on your own infrastructure, integrate seamlessly with corporate systems, and adhere to top security standards."
+			},
+			"cloud": {
+				"title": "CLOUD",
+				"text": "Get started instantly — no server setup required. Access and manage your secure containers from any device, anywhere."
+			}
+		},
+		"single": {
+			"title": "SINGLE",
+			"text": {
+				"1": "Your personal vault, right on your computer.",
+				"2": "The single version is a completely standalone app for secure local storage. No sign-ups, no servers, no internet required — total control is yours.",
+				"3": "Available for Windows",
+				"4": "and MacOS"
+			},
+			"download": "DOWNLOAD"
+		},
+		"plans": {
+			"title": "Plans",
+			"text": "Our journey is clear and deliberate: starting with a simple, secure local vault, and evolving into a comprehensive platform for sharing, team collaboration, and enterprise-grade integrations.",
+			"items": {
+				"1": {
+					"title": "Сore + CLI",
+					"text": "Functions for encryption, container generation, and management. Local operation without a GUI, offering maximum transparency. Perfect for DevOps, automation, and CI/CD workflows."
+				},
+				"2": {
+					"title": "Single (Beta)",
+					"text": "No sign-ups, no internet required, and complete control stays with you. User-friendly graphical interface built on the core."
+				},
+				"3": {
+					"title": "Cloud",
+					"text": "Sync your containers via an encrypted cloud. Access them on multiple devices with zero security compromises."
+				},
+				"4": {
+					"title": "Enterprise",
+					"text": "Multi-user access, permissions, auditing, and integrations — all the essentials for enterprise-scale deployment."
+				}
+			}
+		},
+		"footer": {
+			"questions": {
+				"1": "Got questions?",
+				"2": "Send us a message"
+			},
+			"copyright": "All rights reserved"
+		}
+	}
+}
