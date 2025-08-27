@@ -3,6 +3,8 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { Inter, Nunito_Sans, Roboto } from "next/font/google";
 import { notFound } from "next/navigation";
 
+import { GoogleAnalytics } from "~/components/GoogleAnalytics";
+import { YandexMetrika } from "~/components/YandexMetrika";
 import { routing } from "~/i18n/routing";
 
 import "../globals.css";
@@ -41,6 +43,8 @@ export default async function LocaleLayout({
 
 	return (
 		<html lang={locale}>
+			<GoogleAnalytics GA_MEASUREMENT_ID={process.env.GA_MEASUREMENT_ID!} />
+			<YandexMetrika YANDEX_METRIKA_ID={process.env.YANDEX_METRIKA_ID!} />
 			<body className={`${inter.variable} ${nunitoSans.variable} ${roboto.variable} antialiased`}>
 				<NextIntlClientProvider>{children}</NextIntlClientProvider>
 			</body>
