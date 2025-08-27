@@ -1,4 +1,8 @@
 {
+	"metadata": {
+		"title": "Trust Vault — Secure Data Storage and Transfer",
+		"description": "Create reliable encrypted containers, distribute access with ease, and securely transfer data without risk. Open-source solution with modern encryption algorithms."
+	},
 	"HomePage": {
 		"header": {
 			"about": "About",
@@ -50,7 +54,7 @@
 				"text": "Perfect for personal use or small teams. Secure your data fully — no sign-ups, no subscriptions, no limits."
 			},
 			"enterprise": {
-				"title": "ENTERPRISE",
+				"title": "ENTERPRISE (SOON)",
 				"text": "Full control and compliance. Deploy on your own infrastructure, integrate seamlessly with corporate systems, and adhere to top security standards."
 			},
 			"cloud": {

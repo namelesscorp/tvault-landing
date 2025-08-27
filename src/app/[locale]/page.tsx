@@ -16,7 +16,7 @@ export default function Home() {
 			<LayoutHeader />
 			<main>
 				<section className="relative min-h-[100vh] w-full px-[25px] pt-[90px] pb-[50px] lg:px-[40px] lg:pt-[110px] lg:pb-[90px] flex flex-col">
-					<Image src="/bg.webp" fill alt="bg" className="object-cover" />
+					<Image src="/bg.webp" fill alt="bg" className="object-cover" quality={95} />
 					<h1 className="relative z-1 max-w-[1020px] font-nunito-sans font-black text-[48px] lg:text-[73px] leading-[109%] tracking-[-0.02em] uppercase text-white">
 						{t("main.title")}
 					</h1>
@@ -31,7 +31,7 @@ export default function Home() {
 							<p className="mt-[16px] lg:mt-[20px] max-w-[450px] h-[42px] lg:h-[58px] font-inter font-medium text-[16px] lg:text-[20px] leading-[134%] tracking-[0.007em] text-white">
 								{t("main.download.text")}
 							</p>
-							<div className="mt-[20px] lg:mt-[30px] flex items-center justify-center w-[50px] h-[50px] lg:w-[65px] lg:h-[65px] rounded-full bg-white cursor-pointer hover:bg-white/80 transition-all duration-300">
+							<a href="#download" className="mt-[20px] lg:mt-[30px] flex items-center justify-center w-[50px] h-[50px] lg:w-[65px] lg:h-[65px] rounded-full bg-white cursor-pointer hover:bg-white/80 transition-all duration-300">
 								<Image
 									src="/icons/arrow_right.svg"
 									alt="arrow_right"
@@ -39,7 +39,7 @@ export default function Home() {
 									height={11}
 									className="pointer-events-none"
 								/>
-							</div>
+							</a>
 						</div>
 						<div className="px-[20px] py-[30px] lg:px-[40px] lg:py-[30px] rounded-[12px] bg-[rgba(210,210,210,0.1)] backdrop-blur-[40px]">
 							<h2 className="font-inter font-bold text-[24px] leading-[122.6%] text-white">
@@ -48,7 +48,7 @@ export default function Home() {
 							<p className="mt-[16px] lg:mt-[20px] max-w-[400px] h-[42px] lg:h-[58px] font-inter font-medium text-[16px] lg:text-[20px] leading-[134%] tracking-[0.007em] text-white">
 								{t("main.roadmap.text")}
 							</p>
-							<div className="mt-[20px] lg:mt-[30px] flex items-center justify-center w-[50px] h-[50px] lg:w-[65px] lg:h-[65px] rounded-full bg-white cursor-pointer hover:bg-white/80 transition-all duration-300">
+							<a href="#plans" className="mt-[20px] lg:mt-[30px] flex items-center justify-center w-[50px] h-[50px] lg:w-[65px] lg:h-[65px] rounded-full bg-white cursor-pointer hover:bg-white/80 transition-all duration-300">
 								<Image
 									src="/icons/arrow_right.svg"
 									alt="arrow_right"
@@ -56,7 +56,7 @@ export default function Home() {
 									height={11}
 									className="pointer-events-none"
 								/>
-							</div>
+							</a>
 						</div>
 					</div>
 				</section>
@@ -140,7 +140,7 @@ export default function Home() {
 						</div>
 					</div>
 					<h3
-						className="mt-[48px] lg:mt-[140px] font-nunito-sans font-black text-[48px] leading-[109%] tracking-[-0.02em] uppercase text-[#5D5B5B]"
+						className="mt-[48px] lg:mt-[60px] font-nunito-sans font-black text-[48px] leading-[109%] tracking-[-0.02em] uppercase text-[#5D5B5B]"
 						id="download">
 						{t("single.title")}
 					</h3>
