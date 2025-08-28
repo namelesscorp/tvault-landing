@@ -1,10 +1,12 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
 
 const MobileMenu = () => {
+	const t = useTranslations("HomePage.header");
 	const [isOpen, setIsOpen] = useState(false);
 
 	useEffect(() => {
@@ -38,24 +40,24 @@ const MobileMenu = () => {
 							href="#about"
 							className="font-inter font-medium text-[15px] tracking-[0.007em] text-[#FFFFFF]"
 							onClick={() => setIsOpen(false)}>
-							О продукте
+							{t("about")}
 						</Link>
 						<Link
 							href="#versions"
 							className="font-inter font-medium text-[15px] tracking-[0.007em] text-[#FFFFFF]"
 							onClick={() => setIsOpen(false)}>
-							Версии
+							{t("versions")}
 						</Link>
 						<Link
 							href="#plans"
 							className="font-inter font-medium text-[15px] tracking-[0.007em] text-[#FFFFFF]"
 							onClick={() => setIsOpen(false)}>
-							Планы
+							{t("plans")}
 						</Link>
 						<Link href="#download" onClick={() => setIsOpen(false)}>
 							<div className="flex items-center justify-center px-[28px] h-[46px] rounded-[14px] border border-white ">
 								<p className="font-inter font-medium text-[15px] tracking-[-0.04em] text-[#FFFFFF] leading-[100%]">
-									Скачать
+									{t("download")}
 								</p>
 							</div>
 						</Link>

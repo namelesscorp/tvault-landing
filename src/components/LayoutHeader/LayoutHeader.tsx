@@ -6,6 +6,7 @@ import { SelectLanguage } from "../SelectLanguage";
 
 const LayoutHeader = () => {
 	const t = useTranslations("HomePage.header");
+
 	return (
 		<header className="absolute top-0 left-0 w-full z-10 p-[25px] flex justify-between items-center">
 			<Link href="/" className="font-inter italic font-extrabold text-[22px] tracking-[-0.055em] text-white">
