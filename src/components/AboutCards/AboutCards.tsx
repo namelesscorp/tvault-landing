@@ -82,7 +82,7 @@ const AboutCards = () => {
 								</div>
 							)}
 							{activeCard === 3 && (
-								<div className="relative flex flex-col items-center justify-between h-[177px] p-[20px] bg-[#EBF1FA] rounded-[32px] overflow-hidden">
+								<div className="relative flex flex-col items-center justify-center gap-[40px] h-[177px] p-[20px] bg-[#EBF1FA] rounded-[32px] overflow-hidden">
 									<p className="max-w-[300px] font-inter font-medium text-[16px] leading-[144%] text-[#141414] tracking-[0.007em] opacity-80 text-left">
 										{t("about.cards.4")}
 									</p>
@@ -136,7 +136,7 @@ const AboutCards = () => {
 						{t("about.cards.3")}
 					</p>
 				</div>
-				<div className="relative flex flex-col items-center justify-between h-[240px] p-[20px] bg-[#EBF1FA] rounded-[32px] overflow-hidden">
+				<div className="relative flex flex-col items-center justify-center gap-[46px] h-[240px] p-[20px] bg-[#EBF1FA] rounded-[32px] overflow-hidden">
 					<p className="max-w-[300px] font-inter font-medium text-[18px] leading-[144%] text-[#141414] tracking-[0.007em] opacity-80 text-left">
 						{t("about.cards.4")}
 					</p>
