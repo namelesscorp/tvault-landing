@@ -1,10 +1,11 @@
 "use client";
 
 import Script from "next/script";
+import { Fragment } from "react";
 
 const GoogleAnalytics = ({ GA_MEASUREMENT_ID }: { GA_MEASUREMENT_ID: string }) => {
 	return (
-		<>
+		<Fragment>
 			<Script
 				strategy="afterInteractive"
 				src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
@@ -21,7 +22,7 @@ const GoogleAnalytics = ({ GA_MEASUREMENT_ID }: { GA_MEASUREMENT_ID: string }) =
 					`,
 				}}
 			/>
-		</>
+		</Fragment>
 	);
 };
 

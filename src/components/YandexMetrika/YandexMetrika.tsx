@@ -2,12 +2,11 @@ import Script from "next/script";
 
 const YandexMetrika = ({ YANDEX_METRIKA_ID }: { YANDEX_METRIKA_ID: string }) => {
 	return (
-		<>
-			<Script
-				strategy="afterInteractive"
-				id="yandex-metrika"
-				dangerouslySetInnerHTML={{
-					__html: `
+		<Script
+			strategy="afterInteractive"
+			id="yandex-metrika"
+			dangerouslySetInnerHTML={{
+				__html: `
 						(function(m,e,t,r,i,k,a){
 							m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
 							m[i].l=1*new Date();
@@ -17,18 +16,8 @@ const YandexMetrika = ({ YANDEX_METRIKA_ID }: { YANDEX_METRIKA_ID: string }) => 
 
 						ym(${YANDEX_METRIKA_ID}, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
 					`,
-				}}
-			/>
-			<noscript>
-				<div>
-					<img
-						src={`https://mc.yandex.ru/watch/${YANDEX_METRIKA_ID}`}
-						style={{ position: "absolute", left: "-9999px" }}
-						alt=""
-					/>
-				</div>
-			</noscript>
-		</>
+			}}
+		/>
 	);
 };
 

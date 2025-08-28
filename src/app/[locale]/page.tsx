@@ -1,22 +1,34 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import { headers } from "next/headers";
 import Image from "next/image";
 import { Fragment } from "react";
 
 import { AboutCards } from "~/components/AboutCards";
+import { DownloadLinks } from "~/components/DownloadLink";
 import { LayoutFooter } from "~/components/LayoutFooter";
 import { LayoutHeader } from "~/components/LayoutHeader";
 import { Plans } from "~/components/Plans";
 import { SingleVersionSlider } from "~/components/SingleVersionSlider";
 
-export default function Home() {
-	const t = useTranslations("HomePage");
+export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
+	const { locale } = await params;
+	const t = await getTranslations({ locale, namespace: "HomePage" });
+	const headersList = await headers();
+	const userAgent = headersList.get("user-agent") || "";
 
 	return (
 		<Fragment>
 			<LayoutHeader />
 			<main>
 				<section className="relative min-h-[100vh] w-full px-[25px] pt-[90px] pb-[50px] lg:px-[40px] lg:pt-[110px] lg:pb-[90px] flex flex-col">
-					<Image src="/bg.webp" fill alt="bg" className="object-cover" quality={95} />
+					<Image
+						src="/bg.webp"
+						fill
+						alt="bg"
+						className="object-cover"
+						quality={95}
+						style={{ scale: "1 -1" }}
+					/>
 					<h1 className="relative z-1 max-w-[1020px] font-nunito-sans font-black text-[48px] lg:text-[73px] leading-[109%] tracking-[-0.02em] uppercase text-white">
 						{t("main.title")}
 					</h1>
@@ -31,7 +43,9 @@ export default function Home() {
 							<p className="mt-[16px] lg:mt-[20px] max-w-[450px] h-[42px] lg:h-[58px] font-inter font-medium text-[16px] lg:text-[20px] leading-[134%] tracking-[0.007em] text-white">
 								{t("main.download.text")}
 							</p>
-							<a href="#download" className="mt-[20px] lg:mt-[30px] flex items-center justify-center w-[50px] h-[50px] lg:w-[65px] lg:h-[65px] rounded-full bg-white cursor-pointer hover:bg-white/80 transition-all duration-300">
+							<a
+								href="#download"
+								className="mt-[20px] lg:mt-[30px] flex items-center justify-center w-[50px] h-[50px] lg:w-[65px] lg:h-[65px] rounded-full bg-white cursor-pointer hover:bg-white/80 transition-all duration-300">
 								<Image
 									src="/icons/arrow_right.svg"
 									alt="arrow_right"
@@ -48,7 +62,9 @@ export default function Home() {
 							<p className="mt-[16px] lg:mt-[20px] max-w-[400px] h-[42px] lg:h-[58px] font-inter font-medium text-[16px] lg:text-[20px] leading-[134%] tracking-[0.007em] text-white">
 								{t("main.roadmap.text")}
 							</p>
-							<a href="#plans" className="mt-[20px] lg:mt-[30px] flex items-center justify-center w-[50px] h-[50px] lg:w-[65px] lg:h-[65px] rounded-full bg-white cursor-pointer hover:bg-white/80 transition-all duration-300">
+							<a
+								href="#plans"
+								className="mt-[20px] lg:mt-[30px] flex items-center justify-center w-[50px] h-[50px] lg:w-[65px] lg:h-[65px] rounded-full bg-white cursor-pointer hover:bg-white/80 transition-all duration-300">
 								<Image
 									src="/icons/arrow_right.svg"
 									alt="arrow_right"
@@ -149,13 +165,12 @@ export default function Home() {
 						<br />
 						{t("single.text.2")}
 					</p>
-					<p className="mt-[18px] lg:mt-[28px] font-inter font-medium text-[16px] lg:text-[26px] leading-[128%] text-[#5D5B5B]">
-						{t("single.text.3")} <span className="font-semibold lg:font-black">64-bit / 32-bit</span>{" "}
-						{t("single.text.4")} <span className="font-semibold lg:font-black">Intel / Apple Silicon</span>
-					</p>
-					<button className="block mx-auto mt-[48px] w-[150px] lg:w-[250px] h-[50px] rounded-full border-none bg-[#1648F9] text-white font-nunito-sans font-black text-[20px] leading-[144%] tracking-[0.02em] uppercase cursor-pointer hover:bg-[#1648F9]/80 transition-all duration-300">
-						{t("single.download")}
-					</button>
+					<DownloadLinks
+						title1={t("single.text.3")}
+						title2={t("single.text.4")}
+						titleButton={t("single.download")}
+						userAgent={userAgent}
+					/>
 					<div className="hidden lg:block mt-[32px]">
 						<SingleVersionSlider />
 					</div>
