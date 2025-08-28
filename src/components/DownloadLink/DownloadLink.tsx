@@ -3,6 +3,8 @@ import { Fragment } from "react";
 
 import { extractDownloadLinks, getBestDownloadLink } from "~/utils/downloads";
 
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+
 const fallback = "https://github.com/namelesscorp/tvault/releases";
 
 const DownloadLinks = async ({
@@ -16,7 +18,7 @@ const DownloadLinks = async ({
 	titleButton: string;
 	userAgent: string;
 }) => {
-	const release = await fetch("http://localhost:3000/api/release")
+	const release = await fetch(`${BASE_URL}/api/release`)
 		.then(res => res.json())
 		.then(data => extractDownloadLinks(data));
 
