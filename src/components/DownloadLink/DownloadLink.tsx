@@ -29,21 +29,21 @@ const DownloadLinks = async ({
 			<p className="mt-[18px] lg:mt-[28px] font-inter font-medium text-[16px] lg:text-[26px] leading-[128%] text-[#5D5B5B]">
 				{title1}{" "}
 				<span className="font-semibold lg:font-black">
-					<Link href={release.windows64 || fallback} target="_blank">
+					<Link href={release.windows64 || fallback} target="_blank" className="underline">
 						64-bit
 					</Link>{" "}
 					/{" "}
-					<Link href={release.windows32 || fallback} target="_blank">
+					<Link href={release.windows32 || fallback} target="_blank" className="underline">
 						32-bit
 					</Link>
 				</span>{" "}
 				{title2}{" "}
 				<span className="font-semibold lg:font-black">
-					<Link href={release.macIntel || fallback} target="_blank">
+					<Link href={release.macIntel || fallback} target="_blank" className="underline">
 						Intel
 					</Link>{" "}
 					/{" "}
-					<Link href={release.macArm || fallback} target="_blank">
+					<Link href={release.macArm || fallback} target="_blank" className="underline">
 						Apple Silicon
 					</Link>
 				</span>

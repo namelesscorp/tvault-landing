@@ -43,13 +43,14 @@ const SingleVersionSlider = () => {
 			<SwitchTransition>
 				<CSSTransition key={currentSlide} timeout={300} classNames={classNames} nodeRef={nodeRef}>
 					<div ref={nodeRef}>
-						<div className="relative flex items-center justify-center h-[475px] py-[20px] px-[30px] bg-[#FFFFFF] rounded-[32px] shadow-[0px_4px_16px_rgba(200,200,200,0.25)]">
+						<div className="relative flex items-center justify-center h-[475px] py-[20px] px-[30px] bg-[#08091c] rounded-[32px] shadow-[0px_4px_16px_rgba(200,200,200,0.25)]">
 							<Image
-								src={`/single/${currentSlide + 1}.png`}
+								src={`/single/${currentSlide + 1}.webp`}
 								alt="single_version_1"
 								width={650}
 								height={433}
 								className="rounded-[15px] object-cover w-[650px] h-[433px]"
+								quality={100}
 							/>
 						</div>
 					</div>

@@ -156,7 +156,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 						</div>
 					</div>
 					<h3
-						className="mt-[48px] lg:mt-[60px] font-nunito-sans font-black text-[48px] leading-[109%] tracking-[-0.02em] uppercase text-[#5D5B5B]"
+						className="mt-[48px] lg:mt-[15px] font-nunito-sans font-black text-[48px] leading-[109%] tracking-[-0.02em] uppercase text-[#5D5B5B]"
 						id="download">
 						{t("single.title")}
 					</h3>
