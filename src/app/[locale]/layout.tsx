@@ -5,6 +5,7 @@ import { Inter, Nunito_Sans, Roboto } from "next/font/google";
 import { notFound } from "next/navigation";
 
 import { GoogleAnalytics } from "~/components/GoogleAnalytics";
+import { Schema } from "~/components/Schema";
 import { YandexMetrika } from "~/components/YandexMetrika";
 import { routing } from "~/i18n/routing";
 
@@ -52,8 +53,15 @@ export default async function LocaleLayout({
 
 	return (
 		<html lang={locale}>
-			<GoogleAnalytics GA_MEASUREMENT_ID={process.env.GA_MEASUREMENT_ID!} />
-			<YandexMetrika YANDEX_METRIKA_ID={process.env.YANDEX_METRIKA_ID!} />
+			<head>
+				<GoogleAnalytics GA_MEASUREMENT_ID={process.env.GA_MEASUREMENT_ID!} />
+				<YandexMetrika YANDEX_METRIKA_ID={process.env.YANDEX_METRIKA_ID!} />
+				<link rel="canonical" href={`https://tvault.app/${locale}`} />
+				<link rel="alternate" hrefLang="en" href={`https://tvault.app/en`} />
+				<link rel="alternate" hrefLang="ru" href={`https://tvault.app/ru`} />
+				<link rel="alternate" hrefLang="x-default" href={`https://tvault.app/`} />
+				<Schema locale={locale} />
+			</head>
 			<body className={`${inter.variable} ${nunitoSans.variable} ${roboto.variable} antialiased`}>
 				<NextIntlClientProvider>{children}</NextIntlClientProvider>
 			</body>
