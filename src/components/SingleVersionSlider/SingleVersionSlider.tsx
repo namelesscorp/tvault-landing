@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 
-const maxIndex = 5;
+const maxIndex = 9;
 
 const classNames = {
 	appear: "opacity-0",
@@ -40,22 +40,21 @@ const SingleVersionSlider = () => {
 					className="rotate-180 user-select-none pointer-events-none"
 				/>
 			</div>
-			<SwitchTransition>
-				<CSSTransition key={currentSlide} timeout={300} classNames={classNames} nodeRef={nodeRef}>
-					<div ref={nodeRef}>
-						<div className="relative flex items-center justify-center h-[475px] py-[20px] px-[30px] bg-[#08091c] rounded-[32px] shadow-[0px_4px_16px_rgba(200,200,200,0.25)]">
-							<Image
-								src={`/single/${currentSlide + 1}.webp`}
-								alt="single_version_1"
-								width={650}
-								height={433}
-								className="rounded-[15px] object-cover w-[650px] h-[433px]"
-								quality={100}
-							/>
-						</div>
-					</div>
-				</CSSTransition>
-			</SwitchTransition>
+			<div className="relative flex items-center justify-center h-[475px] py-[20px] px-[30px] bg-[#08091c] rounded-[32px] shadow-[0px_4px_16px_rgba(200,200,200,0.25)]">
+				<SwitchTransition>
+					<CSSTransition key={currentSlide} timeout={300} classNames={classNames} nodeRef={nodeRef}>
+						<Image
+							src={`/single/${currentSlide + 1}.webp`}
+							alt="single_version_1"
+							width={650}
+							height={433}
+							className="rounded-[15px] object-cover w-[650px] h-[433px]"
+							quality={100}
+							ref={nodeRef}
+						/>
+					</CSSTransition>
+				</SwitchTransition>
+			</div>
 			<div
 				className="flex items-center justify-center w-[60px] h-[60px] bg-[#EBF1FA] rounded-full cursor-pointer hover:bg-[#D9E1EC] transition-all duration-300"
 				onClick={handleNextSlide}>
