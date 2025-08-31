@@ -35,7 +35,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 					<p className="relative z-1 max-w-[840px] font-inter pt-[18px] lg:pt-[24px] font-medium text-[22px] leading-[134%] tracking-[-0.007em] text-white">
 						{t("main.text")}
 					</p>
-					<div className="relative z-1 pt-[18px] lg:pt-[24px]">
+					{/* <div className="relative z-1 pt-[18px] lg:pt-[24px]">
 						<a
 							href="https://www.producthunt.com/products/trust-vault-secure-data-storage?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-trust&#0045;vault&#0045;secure&#0045;data&#0045;storage"
 							target="_blank">
@@ -46,7 +46,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 								height="54"
 							/>
 						</a>
-					</div>
+					</div> */}
 
 					<div className="relative z-1 flex flex-col lg:grid lg:grid-cols-2 gap-[20px] mt-[18px] lg:mt-auto">
 						<div className="px-[20px] py-[30px] lg:px-[40px] lg:py-[30px] rounded-[12px] bg-[rgba(210,210,210,0.1)] backdrop-blur-[40px]">
