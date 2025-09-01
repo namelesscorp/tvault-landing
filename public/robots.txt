@@ -2,18 +2,7 @@ User-agent: *
 Allow: /
 
 Disallow: /api/
-
 Disallow: /_next/
 Disallow: /_vercel/
 
-Disallow: /*.json$
-Disallow: /*.xml$
-Disallow: /*.txt$
-
-Allow: /public/
-Allow: /favicon.ico
-Allow: /favicon.png
-
 Sitemap: https://tvault.app/sitemap.xml
-
-Crawl-delay: 1
