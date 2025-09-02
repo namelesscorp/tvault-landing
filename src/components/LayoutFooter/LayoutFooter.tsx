@@ -20,12 +20,12 @@ const LayoutFooter = () => {
 					</a>
 				</div>
 				<div className="flex flex-col lg:flex-row gap-[24px] lg:gap-[20px]">
-					{/* <a
+					<a
 						href="https://t.me/tvault_app"
 						target="_blank"
 						className="font-inter font-medium text-[22px] leading-[134%] tracking-[0.007em] lg:text-[18px] lg:leading-[144%]  text-[#FFFFFF]">
 						Telegram
-					</a> */}
+					</a>
 					<a
 						href="https://github.com/namelesscorp/"
 						target="_blank"
