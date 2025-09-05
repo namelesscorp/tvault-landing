@@ -181,6 +181,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 					<DownloadLinks
 						title1={t("single.text.3")}
 						title2={t("single.text.4")}
+						title3={t("single.text.5")}
 						titleButton={t("single.download")}
 						userAgent={userAgent}
 					/>

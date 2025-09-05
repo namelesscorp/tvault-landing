@@ -68,7 +68,8 @@
 				"1": "Your personal vault, right on your computer.",
 				"2": "The single version is a completely standalone app for secure local storage. No sign-ups, no servers, no internet required — total control is yours.",
 				"3": "Available for Windows",
-				"4": "and MacOS"
+				"4": ", MacOS",
+				"5": "and Linux"
 			},
 			"download": "DOWNLOAD"
 		},

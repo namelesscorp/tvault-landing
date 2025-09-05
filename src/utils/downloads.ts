@@ -11,6 +11,7 @@ interface ReleaseData {
 		"darwin-x86_64"?: PlatformData;
 		"windows-x86_64"?: PlatformData;
 		"windows-i686"?: PlatformData;
+		"linux-x86_64"?: PlatformData;
 		[key: string]: PlatformData | undefined;
 	};
 }
@@ -20,6 +21,7 @@ interface DownloadLinks {
 	macIntel: string | null;
 	windows64: string | null;
 	windows32: string | null;
+	linux: string | null;
 }
 
 /**
@@ -45,6 +47,7 @@ export function extractDownloadLinks(releaseData: ReleaseData): DownloadLinks {
 		macIntel: macIntelUrl ? convertToDmgUrl(macIntelUrl) : null,
 		windows64: releaseData.platforms["windows-x86_64"]?.url || null,
 		windows32: releaseData.platforms["windows-i686"]?.url || null,
+		linux: releaseData.platforms["linux-x86_64"]?.url || null,
 	};
 }
 

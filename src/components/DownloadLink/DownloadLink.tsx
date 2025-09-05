@@ -12,11 +12,13 @@ const fallback = "https://github.com/namelesscorp/tvault/releases";
 const DownloadLinks = async ({
 	title1,
 	title2,
+	title3,
 	titleButton,
 	userAgent,
 }: {
 	title1: string;
 	title2: string;
+	title3: string;
 	titleButton: string;
 	userAgent: string;
 }) => {
@@ -38,6 +40,10 @@ const DownloadLinks = async ({
 				<span className="font-semibold lg:font-black">
 					<DownloadLinkClient link={release.macIntel || fallback} title="Intel" /> /{" "}
 					<DownloadLinkClient link={release.macArm || fallback} title="Apple Silicon" />
+				</span>{" "}
+				{title3}{" "}
+				<span className="font-semibold lg:font-black">
+					<DownloadLinkClient link={release.linux || fallback} title="AppImage" />
 				</span>
 			</p>
 			<DownloadButtonClient link={bestDownloadLink} title={titleButton} />
