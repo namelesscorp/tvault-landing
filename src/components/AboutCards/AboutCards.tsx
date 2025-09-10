@@ -46,7 +46,7 @@ const AboutCards = () => {
 					<CSSTransition key={activeCard} timeout={300} classNames={classNames} nodeRef={nodeRef}>
 						<div ref={nodeRef}>
 							{activeCard === 0 && (
-								<div className="relative flex items-center justify-center h-[177px] p-[20px] bg-[#EBF1FA] rounded-[32px]">
+								<div className="relative flex items-center justify-center h-[177px] p-[20px] bg-[#EBF1FA] rounded-[32px] overflow-hidden">
 									<Image src="/about_card_1.png" alt="about_card_1" fill className="object-cover" />
 									<p className="max-w-[300px] font-inter font-medium text-[18px] leading-[144%] text-[#141414] tracking-[0.007em] opacity-80 text-center">
 										{t("about.cards.1")}

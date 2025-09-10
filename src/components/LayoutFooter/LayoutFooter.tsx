@@ -27,6 +27,12 @@ const LayoutFooter = () => {
 						Telegram
 					</a>
 					<a
+						href="https://x.com/tvault_app"
+						target="_blank"
+						className="font-inter font-medium text-[22px] leading-[134%] tracking-[0.007em] lg:text-[18px] lg:leading-[144%]  text-[#FFFFFF]">
+						X
+					</a>
+					<a
 						href="https://github.com/namelesscorp/"
 						target="_blank"
 						className="font-inter font-medium text-[22px] leading-[134%] tracking-[0.007em] lg:text-[18px] lg:leading-[144%]  text-[#FFFFFF]">
