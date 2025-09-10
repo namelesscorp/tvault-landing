@@ -1,7 +1,8 @@
 {
 	"metadata": {
 		"title": "Trust Vault — Secure Data Storage and Transfer",
-		"description": "Create reliable encrypted containers, distribute access with ease, and securely transfer data without risk. Open-source solution with modern encryption algorithms."
+		"description": "Create reliable encrypted containers, distribute access with ease, and securely transfer data without risk. Open-source solution with modern encryption algorithms.",
+		"keywords": "secure storage, encrypted file sharing, AES-256, zero-knowledge, privacy, cybersecurity, data protection, information security, open source security, secure collaboration, Shamir's Secret Sharing, passwordless access, secure cloud, data encryption, end-to-end encryption"
 	},
 	"HomePage": {
 		"header": {
