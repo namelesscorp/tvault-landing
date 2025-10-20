@@ -23,7 +23,7 @@ export async function GET() {
 			headers: {
 				"User-Agent": "TrustVault-Landing/1.0",
 			},
-			next: { revalidate: 300 },
+			next: { revalidate: 43200 },
 		});
 
 		if (!response.ok) {
