@@ -101,7 +101,39 @@
 				"1": "Остались вопросы?",
 				"2": "Напишите нам"
 			},
-			"copyright": "Все права защищены"
+			"copyright": "Все права защищены",
+			"links": {
+				"navigation": {
+					"title": "Навигация",
+					"overview": "Обзор",
+					"download": "Скачать",
+					"roadmap": "Дорожная карта",
+					"features": "Возможности",
+					"versions": "Версии"
+				},
+				"resources": {
+					"title": "Ресурсы",
+					"documentation": "Документация",
+					"comparisons": "Сравнения",
+					"community": "Сообщество",
+					"nameless": "Nameless",
+					"pressKit": "Пресс-кит",
+					"contact": "Контакты",
+					"reviews": "Отзывы",
+					"faq": "FAQ"
+				},
+				"socials": {
+					"title": "Социальные сети",
+					"x": "X (бывший Twitter)",
+					"telegram": "Telegram",
+					"github": "GitHub"
+				},
+				"bottom": {
+					"privacyPolicy": "Политика конфиденциальности",
+					"termsOfService": "Условия использования",
+					"license": "Лицензия"
+				}
+			}
 		}
 	}
 }

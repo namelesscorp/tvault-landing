@@ -101,7 +101,39 @@
 				"1": "Got questions?",
 				"2": "Send us a message"
 			},
-			"copyright": "All rights reserved"
+			"copyright": "All rights reserved",
+			"links": {
+				"navigation": {
+					"title": "Navigation",
+					"overview": "Overview",
+					"download": "Download",
+					"roadmap": "Roadmap",
+					"features": "Features",
+					"versions": "Versions"
+				},
+				"resources": {
+					"title": "Resources",
+					"documentation": "Documentation",
+					"comparisons": "Comparisons",
+					"community": "Community",
+					"nameless": "Nameless",
+					"pressKit": "Press Kit",
+					"contact": "Contact",
+					"reviews": "Reviews",
+					"faq": "FAQ"
+				},
+				"socials": {
+					"title": "Socials",
+					"x": "X (ex. Twitter)",
+					"telegram": "Telegram",
+					"github": "GitHub"
+				},
+				"bottom": {
+					"privacyPolicy": "Privacy Policy",
+					"termsOfService": "Terms of Service",
+					"license": "License"
+				}
+			}
 		}
 	}
 }
