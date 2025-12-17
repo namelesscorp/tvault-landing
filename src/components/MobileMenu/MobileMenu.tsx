@@ -20,7 +20,7 @@ const MobileMenu = () => {
 				alt="menu"
 				width={36}
 				height={36}
-				className="cursor-pointer"
+				className="cursor-pointer invert"
 				onClick={() => setIsOpen(!isOpen)}
 			/>
 			{isOpen && (

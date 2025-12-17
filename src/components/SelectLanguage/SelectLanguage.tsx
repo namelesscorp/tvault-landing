@@ -37,14 +37,14 @@ const SelectLanguage = () => {
 	return (
 		<div className="relative" ref={dropdownRef}>
 			<div className="flex items-center gap-[8px] cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
-				<p className="font-inter font-medium text-[18px] leading-[144%] tracking-[0.007em] text-white">
+				<p className="font-inter font-medium text-[20px] tracking-[-0.05em] text-black/70">
 					{currentLanguage?.code}
 				</p>
 				<Image
 					src="/icons/arrow_down.svg"
 					alt="arrow_down"
-					width={8}
-					height={6}
+					width={13}
+					height={11}
 					className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
 				/>
 			</div>

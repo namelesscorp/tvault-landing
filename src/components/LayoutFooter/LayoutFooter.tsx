@@ -2,10 +2,12 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
-import { bottomLinks, links, linksCategories } from "./LayoutFooter.model";
+import { bottomLinks, links, linksCategories } from "../Links";
 
 const LayoutFooter = () => {
 	const t = useTranslations("HomePage.footer");
+	const tHeader = useTranslations("HomePage.header");
+
 	return (
 		<footer className="px-[20px] lg:px-[50px] py-[20px] bg-[#101827] flex flex-col gap-[20px] lg:gap-[50px]">
 			<div className="flex flex-col gap-[30px] lg:gap-[0px] lg:flex-row justify-between lg:px-[30px]">
@@ -32,7 +34,7 @@ const LayoutFooter = () => {
 				{linksCategories.map((category, index) => (
 					<div key={category} className="flex flex-col gap-[14px] lg:gap-[35px]">
 						<p className="font-inter font-extrabold text-[24px] tracking-[-0.05em] text-white">
-							{t(`links.${category}.title`)}
+							{tHeader(`links.${category}.title`)}
 						</p>
 						<div className="flex flex-col gap-[8px] lg:gap-[15px]">
 							{links[index].map(link => (
@@ -40,7 +42,7 @@ const LayoutFooter = () => {
 									key={link.titleKey}
 									href={link.href}
 									className="font-inter font-medium text-[16px] lg:text-[20px] tracking-[-0.05em] text-white/70">
-									{t(`links.${category}.${link.titleKey}`)}
+									{tHeader(`links.${category}.${link.titleKey}`)}
 								</Link>
 							))}
 						</div>

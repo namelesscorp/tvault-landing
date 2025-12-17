@@ -7,7 +7,11 @@ export const links = [
 			href: "#",
 		},
 		{
-			titleKey: "download",
+			titleKey: "features",
+			href: "#",
+		},
+		{
+			titleKey: "versions",
 			href: "#",
 		},
 		{
@@ -15,11 +19,7 @@ export const links = [
 			href: "#",
 		},
 		{
-			titleKey: "features",
-			href: "#",
-		},
-		{
-			titleKey: "versions",
+			titleKey: "download",
 			href: "#",
 		},
 	],
