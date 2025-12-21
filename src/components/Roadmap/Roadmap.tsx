@@ -16,11 +16,11 @@ const roadmapIcons = {
 		color: "#17A34A",
 	},
 	[RoadmapStatus.CURRENT]: {
-		icon: "check_circle.svg",
+		icon: "",
 		color: "#2663EB",
 	},
 	[RoadmapStatus.PLANNED]: {
-		icon: "check_circle.svg",
+		icon: "clock.svg",
 		color: "#D1D5DC",
 	},
 };
@@ -37,9 +37,7 @@ const Roadmap = async ({ locale }: { locale: string }) => {
 	const t = await getTranslations({ locale, namespace: "HomePage" });
 
 	return (
-		<section
-			className="flex flex-col items-center py-[40px] px-[25px] lg:py-[50px] lg:px-[40px] bg-[#F5F7FF]"
-			id="roadmap">
+		<section className="flex flex-col items-center py-[40px] lg:py-[50px] lg:px-[40px] bg-[#F5F7FF]" id="roadmap">
 			<h2
 				className={cn(
 					"px-[25px] font-inter font-extrabold tracking-[-0.05em] text-black/80 text-center lg:text-[48px] leading-[110%]",
@@ -54,7 +52,7 @@ const Roadmap = async ({ locale }: { locale: string }) => {
 				)}>
 				{t("roadmap.text")}
 			</p>
-			<div className="block lg:grid lg:[grid-template-columns:2px_1fr] w-full max-w-[1210px] gap-[40px] mt-[40px] lg:mt-[60px]">
+			<div className="block lg:grid lg:[grid-template-columns:2px_1fr] w-full max-w-[1210px] gap-[40px] mt-[40px] lg:mt-[60px] px-[25px] lg:px-[0px]">
 				<div className="relative hidden lg:block w-[2px] h-full">
 					<div className="absolute top-0 left-0 w-[1px] h-full ml-[1px] bg-[#D1D5DC]" />
 				</div>
@@ -102,12 +100,17 @@ const Roadmap = async ({ locale }: { locale: string }) => {
 
 							<div className="grid [grid-template-columns:30px_1fr] gap-[10px]">
 								<div className="mt-[20px]">
-									<ImgIcon
-										icon={roadmapIcons[status].icon}
-										color={roadmapIcons[status].color}
-										width={30}
-										height={30}
-									/>
+									{roadmapIcons[status].icon && (
+										<ImgIcon
+											icon={roadmapIcons[status].icon}
+											color={roadmapIcons[status].color}
+											width={30}
+											height={30}
+										/>
+									)}
+									{status === RoadmapStatus.CURRENT && (
+										<div className="w-[30px] h-[30px] bg-[#DBE9FE] rounded-full"></div>
+									)}
 								</div>
 								<div>
 									<p className="font-inter font-bold text-[28px] tracking-[-0.05em] text-black/80">
@@ -118,9 +121,33 @@ const Roadmap = async ({ locale }: { locale: string }) => {
 									</p>
 								</div>
 							</div>
+							<div className="hidden lg:grid [grid-template-columns:400px_400px] gap-[20px]">
+								{new Array(4).fill(0).map((_, i) => (
+									<div
+										className="grid [grid-template-columns:20px_1fr] gap-[5px]"
+										key={`${index}-${i}`}>
+										<ImgIcon icon="arrow_right_2.svg" color="#2663EB" width={20} height={20} />
+										<p className="font-inter text-[16px] tracking-[-0.05em] text-black/70">
+											{t(`roadmap.items.${index + 1}.info.${i + 1}`)}
+										</p>
+									</div>
+								))}
+							</div>
 						</div>
 					))}
 				</div>
+			</div>
+			<div className="w-full lg:max-w-[1200px] bg-[#3A73ED] lg:rounded-[10px] px-[30px] py-[40px] lg:px-0 lg:py-[35px] mt-[40px]">
+				<p className="font-inter font-bold text-[32px] tracking-[-0.05em] text-white text-center">
+					{t("roadmap.vision.title")}
+				</p>
+				<p className="max-w-[600px] mt-[5px] font-inter font-medium text-[16px] tracking-[-0.05em] text-white/90 text-center">
+					{t("roadmap.vision.text")}
+				</p>
+				<p className="mt-[5px] font-inter font-medium text-[14px] tracking-[-0.05em] text-white/80 text-center">
+					✓&nbsp; {t("roadmap.vision.items.1")}&nbsp;&nbsp;&nbsp;&nbsp; ✓&nbsp; {t("roadmap.vision.items.2")}
+					&nbsp;&nbsp;&nbsp;&nbsp; ✓&nbsp; {t("roadmap.vision.items.3")}
+				</p>
 			</div>
 		</section>
 	);

@@ -410,6 +410,15 @@
 						"4": "Enterprise integrations"
 					}
 				}
+			},
+			"vision": {
+				"title": "Our Vision",
+				"text": "To create the most trusted and user-friendly secure data storage platform, empowering individuals and organizations to maintain complete control over their sensitive information while enjoying seamless access across all their devices.",
+				"items": {
+					"1": "Personal",
+					"2": "Cloud",
+					"3": "Enterprise"
+				}
 			}
 		}
 	},
