@@ -2,7 +2,10 @@ import { getTranslations } from "next-intl/server";
 
 import { cn } from "~/utils/css";
 
+import { ButtonTransparent } from "../ButtonTransparent";
 import { ImgIcon } from "../ImgIcon";
+import { Input } from "../Input";
+import { SubscribeFormRoadmap } from "../SubscribeFormRoadmap";
 
 enum RoadmapStatus {
 	COMPLETED = "completed",
@@ -141,13 +144,16 @@ const Roadmap = async ({ locale }: { locale: string }) => {
 				<p className="font-inter font-bold text-[32px] tracking-[-0.05em] text-white text-center">
 					{t("roadmap.vision.title")}
 				</p>
-				<p className="max-w-[600px] mt-[5px] font-inter font-medium text-[16px] tracking-[-0.05em] text-white/90 text-center">
+				<p className="max-w-[600px] mt-[5px] mx-auto font-inter font-medium text-[16px] tracking-[-0.05em] text-white/90 text-center">
 					{t("roadmap.vision.text")}
 				</p>
 				<p className="mt-[5px] font-inter font-medium text-[14px] tracking-[-0.05em] text-white/80 text-center">
 					✓&nbsp; {t("roadmap.vision.items.1")}&nbsp;&nbsp;&nbsp;&nbsp; ✓&nbsp; {t("roadmap.vision.items.2")}
 					&nbsp;&nbsp;&nbsp;&nbsp; ✓&nbsp; {t("roadmap.vision.items.3")}
 				</p>
+			</div>
+			<div className="mt-[40px] px-[12px] lg:px-0">
+				<SubscribeFormRoadmap />
 			</div>
 		</section>
 	);

@@ -51,8 +51,12 @@ const Hero = async ({ locale }: { locale: string }) => {
 					<p className="font-inter font-medium text-[15px] tracking-[-0.05em] text-black/70">AES-256</p>
 				</div>
 			</div>
-			<div className="mt-[35px] grid grid-cols-[250px_auto] gap-[10px] lg:gap-[20px]">
-				<Link href="#download">
+			<div
+				className={cn(
+					"mt-[35px] grid gap-[10px] lg:gap-[20px]",
+					locale === "ru" ? "grid-cols-1 lg:grid-cols-[250px_auto]" : "grid-cols-[250px_auto]",
+				)}>
+				<Link href="#download" className={cn(locale === "ru" && "w-full lg:w-auto")}>
 					<ButtonBlue>
 						<div className="flex items-center justify-center gap-[10px]">
 							<ImgIcon icon={"circle_down.svg"} color="#FFFFFF" width={20} height={20} />
@@ -61,7 +65,9 @@ const Hero = async ({ locale }: { locale: string }) => {
 					</ButtonBlue>
 				</Link>
 				<Link href="#about">
-					<ButtonTransparent>{t("hero.learnMore")}</ButtonTransparent>
+					<ButtonTransparent className={cn(locale === "ru" && "w-full lg:w-auto")}>
+						{t("hero.learnMore")}
+					</ButtonTransparent>
 				</Link>
 			</div>
 			<p className="mt-[35px] font-inter font-medium text-[14px] tracking-[-0.05em] text-black/50 text-center">

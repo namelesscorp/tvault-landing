@@ -419,6 +419,15 @@
 					"2": "Cloud",
 					"3": "Enterprise"
 				}
+			},
+			"bottom": {
+				"title": "Stay updated with Trust Vault",
+				"text": "Get notified about new releases, beta access, and important updates across all platforms",
+				"email": "Enter your email address",
+				"subscribe": "Subscribe to Updates",
+				"agree": " I agree to get updates from Trust Vault and accept the",
+				"privacy": "Privacy Policy",
+				"follow": "Follow us on social media"
 			}
 		}
 	},
