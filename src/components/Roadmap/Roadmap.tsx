@@ -2,9 +2,7 @@ import { getTranslations } from "next-intl/server";
 
 import { cn } from "~/utils/css";
 
-import { ButtonTransparent } from "../ButtonTransparent";
 import { ImgIcon } from "../ImgIcon";
-import { Input } from "../Input";
 import { SubscribeFormRoadmap } from "../SubscribeFormRoadmap";
 
 enum RoadmapStatus {
