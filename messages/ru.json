@@ -478,11 +478,21 @@
 		"categories": {
 			"all": "Все",
 			"desktop": "ПК",
-			"features": "Возможности"
+			"features": "Возможности",
+			"reviews": "Отзывы"
 		},
 		"tags": {
 			"overview": "Обзор",
 			"tutorial": "Туториал"
 		}
+	},
+	"PressKit": {
+		"title": "Пресс Кит",
+		"applicationGallery": "Галерея приложения",
+		"logos": "Логотипы"
+	},
+	"Reviews": {
+		"title": "Отзывы",
+		"articles": "Статьи"
 	}
 }

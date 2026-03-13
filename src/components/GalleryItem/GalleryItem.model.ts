@@ -3,7 +3,7 @@ export interface IGalleryItemProps {
 	description: string;
 	image: string;
 	tags?: string[];
-	type: "image" | "video";
+	type: "image" | "video" | "link";
 	category: string;
 	bottomCaption?: string;
 }

@@ -42,7 +42,7 @@ export const links = [
 		},
 		{
 			titleKey: "pressKit",
-			href: "#",
+			href: "/press-kit",
 		},
 		{
 			titleKey: "contact",
@@ -50,11 +50,11 @@ export const links = [
 		},
 		{
 			titleKey: "reviews",
-			href: "#",
+			href: "/reviews",
 		},
 		{
 			titleKey: "faq",
-			href: "#",
+			href: "/faq",
 		},
 	],
 	[

@@ -478,11 +478,21 @@
 		"categories": {
 			"all": "All",
 			"desktop": "Desktop",
-			"features": "Features"
+			"features": "Features",
+			"reviews": "Reviews"
 		},
 		"tags": {
 			"overview": "Overview",
 			"tutorial": "Tutorial"
 		}
+	},
+	"PressKit": {
+		"title": "Press Kit",
+		"applicationGallery": "Application Gallery",
+		"logos": "Logos"
+	},
+	"Reviews": {
+		"title": "Reviews",
+		"articles": "Articles"
 	}
 }

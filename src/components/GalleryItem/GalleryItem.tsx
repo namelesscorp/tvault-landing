@@ -29,7 +29,11 @@ const GalleryItem = ({
 					</div>
 				)}
 				<div className="absolute top-[20px] right-[20px] w-[50px] h-[50px] bg-[#3A73ED] rounded-[10px] flex items-center justify-center">
-					<ImgIcon icon={type === "image" ? "image.svg" : "play.svg"} width={30} height={30} />
+					<ImgIcon
+						icon={type === "image" ? "image.svg" : type === "video" ? "play.svg" : "link_external.svg"}
+						width={30}
+						height={30}
+					/>
 				</div>
 			</div>
 			<div className="flex flex-col gap-[20px] p-[20px]">

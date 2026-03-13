@@ -54,7 +54,7 @@ const LayoutFooter = () => {
 				<div className="flex lg:flex-row gap-[40px] items-center">
 					<Image src="/nameless_logo.svg" alt="Nameless" width={98} height={65} />
 					<p className="hidden lg:block font-inter font-medium text-[16px] lg:text-[20px] tracking-[-0.05em] text-white/70">
-						© 2025 Trust Vault. {t("copyright")}
+						© 2026 Trust Vault. {t("copyright")}
 					</p>
 				</div>
 				<div className="flex flex-col lg:flex-row gap-[10px] lg:gap-[15px] lg:items-center">
@@ -68,7 +68,7 @@ const LayoutFooter = () => {
 					))}
 				</div>
 				<p className="block lg:hidden font-inter font-medium text-[16px] lg:text-[20px] tracking-[-0.05em] text-white/70">
-					© 2025 Trust Vault. {t("copyright")}
+					© 2026 Trust Vault. {t("copyright")}
 				</p>
 			</div>
 		</footer>
