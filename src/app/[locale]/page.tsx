@@ -1,4 +1,4 @@
-// import { headers } from "next/headers";
+import { headers } from "next/headers";
 import { Fragment } from "react";
 
 import { Capabilities } from "~/components/Capabilities";
@@ -13,8 +13,8 @@ import { WhoIs } from "~/components/WhoIs";
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
 	const { locale } = await params;
-	// const headersList = await headers();
-	// const userAgent = headersList.get("user-agent") || "";
+	const headersList = await headers();
+	const userAgent = headersList.get("user-agent") || "";
 
 	return (
 		<Fragment>
@@ -25,7 +25,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 				<Overview locale={locale} />
 				<WhoIs locale={locale} />
 				<Versions locale={locale} />
-				<Download locale={locale} />
+				<Download locale={locale} userAgent={userAgent} />
 				<Roadmap locale={locale} />
 			</main>
 			<LayoutFooter />

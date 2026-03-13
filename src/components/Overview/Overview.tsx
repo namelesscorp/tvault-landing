@@ -39,7 +39,9 @@ const Overview = async ({ locale }: { locale: string }) => {
 	];
 
 	return (
-		<section className="flex flex-col items-center pt-[35px] px-[25px] pb-[80px] lg:py-[50px] bg-[linear-gradient(180deg,_#F0F3FF_0%,_#FFFFFF_100%)]">
+		<section
+			className="flex flex-col items-center pt-[35px] px-[25px] pb-[80px] lg:py-[50px] bg-[linear-gradient(180deg,_#F0F3FF_0%,_#FFFFFF_100%)]"
+			id="overview">
 			<h2
 				className={cn(
 					"font-inter font-extrabold tracking-[-0.05em] text-black/80 text-center lg:text-[48px] leading-[110%]",

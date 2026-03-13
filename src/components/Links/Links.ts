@@ -4,67 +4,67 @@ export const links = [
 	[
 		{
 			titleKey: "overview",
-			href: "#",
+			href: "#overview",
 		},
 		{
 			titleKey: "features",
-			href: "#",
+			href: "#features",
 		},
 		{
 			titleKey: "versions",
-			href: "#",
+			href: "#versions",
 		},
 		{
 			titleKey: "roadmap",
-			href: "#",
+			href: "#roadmap",
 		},
 		{
 			titleKey: "download",
-			href: "#",
+			href: "#download",
 		},
 	],
 	[
 		{
 			titleKey: "documentation",
-			href: "#",
+			href: "https://github.com/namelesscorp/tvault/blob/master/README.md",
 		},
-		{
-			titleKey: "comparisons",
-			href: "#",
-		},
-		{
-			titleKey: "community",
-			href: "#",
-		},
+		// {
+		// 	titleKey: "comparisons",
+		// 	href: "#",
+		// },
+		// {
+		// 	titleKey: "community",
+		// 	href: "#",
+		// },
 		{
 			titleKey: "nameless",
-			href: "#",
+			href: "https://github.com/namelesscorp",
 		},
 		{
 			titleKey: "pressKit",
 			href: "/press-kit",
 		},
-		{
-			titleKey: "contact",
-			href: "#",
-		},
+		// {
+		// 	titleKey: "contact",
+		// 	href: "#",
+		// },
 		{
 			titleKey: "reviews",
 			href: "/reviews",
 		},
-		{
-			titleKey: "faq",
-			href: "/faq",
-		},
+		// {
+		// 	titleKey: "faq",
+		// 	href: "/faq",
+		// },
 	],
 	[
 		{
 			titleKey: "x",
-			href: "https://t.me/tvault_app",
+			href: "https://x.com/tvault_app",
 		},
 		{
 			titleKey: "telegram",
-			href: "https://x.com/tvault_app",
+			href: "https://t.me/tvault_app",
 		},
 		{
 			titleKey: "github",
@@ -74,16 +74,16 @@ export const links = [
 ];
 
 export const bottomLinks = [
-	{
-		titleKey: "privacyPolicy",
-		href: "#",
-	},
-	{
-		titleKey: "termsOfService",
-		href: "#",
-	},
+	// {
+	// 	titleKey: "privacyPolicy",
+	// 	href: "#",
+	// },
+	// {
+	// 	titleKey: "termsOfService",
+	// 	href: "#",
+	// },
 	{
 		titleKey: "license",
-		href: "#",
+		href: "https://github.com/namelesscorp/tvault/blob/master/LICENSE",
 	},
 ];

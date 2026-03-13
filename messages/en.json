@@ -118,6 +118,7 @@
 				"1": "Got questions?",
 				"2": "Send us a message"
 			},
+			"text": "Your personal data safe designed with security, privacy, and convenience in mind. Open source, locally controlled, and built for trust.",
 			"copyright": "All rights reserved",
 			"links": {
 				"bottom": {
@@ -230,13 +231,13 @@
 					}
 				},
 				"5": {
-					"title": "Healthcare Professionals",
-					"text": "HIPAA-compliant solutions for medical records and patient data protection.",
+					"title": "Family Heritage",
+					"text": "Securely preserve and pass down important family documents, memories, and digital assets to future generations.",
 					"benefits": {
-						"1": "HIPAA compliance",
-						"2": "Patient data security",
-						"3": "Medical record storage",
-						"4": "Healthcare team access"
+						"1": "Secure storage of family archives",
+						"2": "Inheritance of important documents",
+						"3": "Protection of digital assets and passwords",
+						"4": "Private access for trusted family members"
 					}
 				},
 				"6": {
@@ -306,7 +307,7 @@
 			"badge": "Personal Version — Free & Open Source",
 			"windows": {
 				"title": "Windows",
-				"info": "v1.2.0 • 45 MB",
+				"info": "v1.2.0",
 				"download": "Download .exe"
 			},
 			"macos": {
@@ -334,15 +335,17 @@
 				"items": {
 					"1": {
 						"platform": "MacOS",
-						"data": "Intel / Apple Silicon"
+						"intel": "Intel",
+						"appleSilicon": "Apple Silicon"
 					},
 					"2": {
 						"platform": "Windows",
-						"data": "64-bit / 32-bit"
+						"x64": "64-bit",
+						"x86": "32-bit"
 					},
 					"3": {
 						"platform": "Linux",
-						"data": "AppImage"
+						"appImage": "AppImage"
 					}
 				}
 			},
@@ -374,9 +377,9 @@
 					"title": "Personal (Beta)",
 					"text": "Graphical user interface for local application",
 					"info": {
-						"1": "AES-256 encryption implementation",
-						"2": "Drag & drop functionality",
-						"3": "Basic CLI operations",
+						"1": "Simple and intuitive interface",
+						"2": "Full control over access to your data",
+						"3": "Secure local storage for sensitive files",
 						"4": "Enhanced user experience"
 					}
 				},
@@ -425,7 +428,9 @@
 				"text": "Get notified about new releases, beta access, and important updates across all platforms",
 				"email": "Enter your email address",
 				"subscribe": "Subscribe to Updates",
-				"agree": " I agree to get updates from Trust Vault and accept the",
+				"sending": "Sending...",
+				"sent": "Sent!",
+				"agree": " I agree to get updates from Trust Vault",
 				"privacy": "Privacy Policy",
 				"follow": "Follow us on social media"
 			}
@@ -470,7 +475,9 @@
 			"namePlaceholder": "Enter your full name",
 			"emailPlaceholder": "Enter your email address",
 			"subscribe": "Subscribe to Updates",
-			"agree": "I agree to get updates from Trust Vault and accept the ",
+			"sending": "Sending...",
+			"sent": "Sent!",
+			"agree": "I agree to get updates from Trust Vault",
 			"privacy": "Privacy Policy"
 		}
 	},

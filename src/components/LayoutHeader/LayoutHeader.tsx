@@ -30,7 +30,7 @@ const LayoutHeader = () => {
 						</Link>
 					))}
 				<SelectLanguage />
-				<Link href="#download">
+				<Link href="#download" className="cursor-pointer">
 					<div className="flex items-center justify-center px-[20px] h-[44px] bg-[#3A73ED] rounded-[14px] hover:bg-[#3A73ED]/90 transition-all duration-300">
 						<p className="font-inter font-medium text-[20px] tracking-[-0.05em] text-[#FFFFFF] leading-[100%]">
 							{t("download")}

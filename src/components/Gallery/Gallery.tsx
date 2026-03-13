@@ -89,7 +89,7 @@ const Gallery = ({ items }: { items: IGalleryItemProps[] }) => {
 			</div>
 			{modalVisible && (
 				<div
-					className="fixed top-0 left-0 w-full h-full z-50 flex items-center justify-center"
+					className="fixed top-0 left-0 w-full h-full z-50 flex items-center justify-center bg-black/50"
 					onClick={() => setModalVisible(false)}>
 					<div
 						className="fixed w-full max-w-[90vw] lg:max-w-[1300px] h-[90vh] lg:h-[900px] mx-auto grid grid-rows-[1fr_auto] bg-[linear-gradient(180deg,_#FFFFFF_0%,_#F0F3FF_100%)] border-2 border-[#E6E7EB] rounded-[10px]"

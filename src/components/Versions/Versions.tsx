@@ -10,7 +10,9 @@ const Versions = async ({ locale }: { locale: string }) => {
 	const t = await getTranslations({ locale, namespace: "HomePage" });
 
 	return (
-		<section className="flex flex-col items-center py-[40px] px-[25px] lg:py-[50px] bg-[linear-gradient(180deg,_#FFFFFF_0%,_#F0F3FF_100%)]">
+		<section
+			className="flex flex-col items-center py-[40px] px-[25px] lg:py-[50px] bg-[linear-gradient(180deg,_#FFFFFF_0%,_#F0F3FF_100%)]"
+			id="versions">
 			<h2
 				className={cn(
 					"font-inter font-extrabold tracking-[-0.05em] text-black/80 text-center lg:text-[48px] leading-[110%]",
@@ -87,7 +89,7 @@ const Versions = async ({ locale }: { locale: string }) => {
 				</div>
 				<div className="flex flex-col items-center gap-[20px] p-[30px] bg-white/80 border-2 border-[#E6E7EB] rounded-[10px] transition-all duration-300 lg:hover:shadow-[0px_5px_5px_2px_rgba(0,0,0,0.1)] lg:hover:border-[#BCDBFE]">
 					<div className="flex items-center justify-center w-[80px] h-[80px] bg-[#DBE9FE] rounded-full">
-						<ImgIcon icon="monitor.svg" color="#3A73ED" width={50} height={50} />
+						<ImgIcon icon="cloud.svg" color="#3A73ED" width={50} height={50} />
 					</div>
 					<p className="font-inter font-bold text-[28px] tracking-[-0.05em] text-black/80 lg:text-[24px] leading-[110%]">
 						{t("versions.cloud.title")}

@@ -64,7 +64,7 @@ const Hero = async ({ locale }: { locale: string }) => {
 						</div>
 					</ButtonBlue>
 				</Link>
-				<Link href="#about">
+				<Link href="#capabilities">
 					<ButtonTransparent className={cn(locale === "ru" && "w-full lg:w-auto")}>
 						{t("hero.learnMore")}
 					</ButtonTransparent>

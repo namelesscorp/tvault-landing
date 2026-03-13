@@ -11,9 +11,48 @@ import { Input } from "../Input";
 const SubscribeFormRoadmap = () => {
 	const t = useTranslations("HomePage");
 	const [email, setEmail] = useState("");
+	const [isSubmitting, setIsSubmitting] = useState(false);
+	const [isSuccess, setIsSuccess] = useState(false);
+	const [error, setError] = useState<string | null>(null);
+
+	const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+		event.preventDefault();
+
+		if (isSubmitting) {
+			return;
+		}
+
+		setIsSubmitting(true);
+		setIsSuccess(false);
+		setError(null);
+
+		try {
+			const response = await fetch("/api/subscribe", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					source: "roadmap-bottom",
+					email,
+				}),
+			});
+
+			if (!response.ok) {
+				throw new Error("Failed to submit subscription");
+			}
+
+			setIsSuccess(true);
+		} catch (e) {
+			console.error(e);
+			setError("Something went wrong. Please try again later.");
+		} finally {
+			setIsSubmitting(false);
+		}
+	};
 
 	return (
-		<form>
+		<form onSubmit={handleSubmit}>
 			<p className="font-inter font-medium text-[20px] tracking-[-0.05em] text-black/70 text-center">
 				{t("roadmap.bottom.title")}
 			</p>
@@ -27,17 +66,24 @@ const SubscribeFormRoadmap = () => {
 					value={email}
 					onChange={e => setEmail(e.target.value)}
 				/>
-				<ButtonTransparent className="h-[45px]">{t("roadmap.bottom.subscribe")}</ButtonTransparent>
+				<ButtonTransparent className="h-[45px]" disabled={isSubmitting}>
+					{isSubmitting
+						? t("roadmap.bottom.sending")
+						: isSuccess
+							? t("roadmap.bottom.sent")
+							: t("roadmap.bottom.subscribe")}
+				</ButtonTransparent>
 			</div>
+			{error && <p className="mt-[8px] font-inter text-[14px] text-red-600 text-center">{error}</p>}
 			<div className="flex items-center justify-center mt-[20] gap-[5px]">
 				<input type="checkbox" id="agree" />
 				<label
 					htmlFor="agree"
 					className="font-inter font-medium text-[12px] lg:text-[15px] tracking-[-0.05em] text-black/70">
 					{t("roadmap.bottom.agree")}{" "}
-					<Link href="/privacy-policy" className="font-semibold">
+					{/* <Link href="/privacy-policy" className="font-semibold">
 						{t("roadmap.bottom.privacy")}
-					</Link>
+					</Link> */}
 				</label>
 			</div>
 			<p className="mt-[40px] font-inter font-medium text-[20px] tracking-[-0.05em] text-black/70 text-center">

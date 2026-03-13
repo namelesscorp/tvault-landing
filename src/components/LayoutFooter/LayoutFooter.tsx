@@ -19,8 +19,7 @@ const LayoutFooter = () => {
 						</p>
 					</div>
 					<p className="font-inter font-medium text-[16px] lg:text-[20px] tracking-[-0.05em] text-white/70">
-						Your personal data safe designed with security, privacy, and convenience in mind. Open source,
-						locally controlled, and built for trust.
+						{t("text")}
 					</p>
 					<a
 						href="mailto:support@tvault.app"
