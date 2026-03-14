@@ -2,9 +2,11 @@
 
 import Link from "next/link";
 
+import { track } from "~/utils/track";
+
 const DownloadButtonClient = ({ link, title }: { link: string; title: string }) => {
 	const handleClick = () => {
-		window.gtag?.("event", "download");
+		track("download");
 	};
 
 	return (

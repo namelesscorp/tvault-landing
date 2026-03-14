@@ -17,6 +17,7 @@ const classNames = {
 
 const AboutCards = () => {
 	const t = useTranslations("HomePage");
+	const tAlt = useTranslations("alt");
 	const [activeCard, setActiveCard] = useState(0);
 	const nodeRef = useRef(null);
 
@@ -36,7 +37,7 @@ const AboutCards = () => {
 					onClick={handlePrevCard}>
 					<Image
 						src="/icons/arrow_right_2.svg"
-						alt="arrow_right_2"
+						alt={tAlt("arrowPrev")}
 						width={24}
 						height={24}
 						className="rotate-180 user-select-none pointer-events-none"
@@ -47,7 +48,12 @@ const AboutCards = () => {
 						<div ref={nodeRef}>
 							{activeCard === 0 && (
 								<div className="relative flex items-center justify-center h-[177px] p-[20px] bg-[#EBF1FA] rounded-[32px] overflow-hidden">
-									<Image src="/about_card_1.png" alt="about_card_1" fill className="object-cover" />
+									<Image
+										src="/about_card_1.png"
+										alt={tAlt("cardOpenSource")}
+										fill
+										className="object-cover"
+									/>
 									<p className="max-w-[300px] font-inter font-medium text-[18px] leading-[144%] text-[#141414] tracking-[0.007em] opacity-80 text-center">
 										{t("about.cards.1")}
 									</p>
@@ -57,7 +63,7 @@ const AboutCards = () => {
 								<div className="relative flex items-center justify-center h-[177px] p-[20px] bg-[#EBF1FA] rounded-[32px] overflow-hidden">
 									<Image
 										src="/about_card_2.svg"
-										alt="about_card_2"
+										alt={tAlt("cardShamir")}
 										width={702}
 										height={424}
 										className="absolute top-1/2 left-1/2 max-w-[702px] max-h-[424px] -translate-x-1/2 -translate-y-1/2 object-cover"
@@ -71,7 +77,7 @@ const AboutCards = () => {
 								<div className="relative flex flex-col items-center justify-center gap-[10px] h-[177px] p-[20px] bg-[#EBF1FA] rounded-[32px] overflow-hidden">
 									<Image
 										src="/about_card_3.svg"
-										alt="about_card_3"
+										alt={tAlt("cardAes")}
 										width={60}
 										height={60}
 										className=""
@@ -88,7 +94,7 @@ const AboutCards = () => {
 									</p>
 									<Image
 										src="/about_card_4.svg"
-										alt="about_card_4"
+										alt={tAlt("cardFree")}
 										width={180}
 										height={60}
 										className=""
@@ -103,7 +109,7 @@ const AboutCards = () => {
 					onClick={handleNextCard}>
 					<Image
 						src="/icons/arrow_right_2.svg"
-						alt="arrow_right_2"
+						alt={tAlt("arrowNext")}
 						width={24}
 						height={24}
 						className="user-select-none pointer-events-none"
@@ -113,7 +119,7 @@ const AboutCards = () => {
 			<div className="hidden opacity-0 opacity-100 transition-opacity duration-300 ease-in-out"></div>
 			<div className="hidden lg:grid lg:grid-cols-4 gap-[30px]">
 				<div className="relative flex items-center justify-center h-[240px] p-[20px] bg-[#EBF1FA] rounded-[32px]">
-					<Image src="/about_card_1.png" alt="about_card_1" fill className="object-cover" />
+					<Image src="/about_card_1.png" alt={tAlt("cardOpenSource")} fill className="object-cover" />
 					<p className="max-w-[300px] font-inter font-medium text-[18px] leading-[144%] text-[#141414] tracking-[0.007em] opacity-80 text-center">
 						{t("about.cards.1")}
 					</p>
@@ -121,7 +127,7 @@ const AboutCards = () => {
 				<div className="relative flex items-center justify-center h-[240px] p-[20px] bg-[#EBF1FA] rounded-[32px] overflow-hidden">
 					<Image
 						src="/about_card_2.svg"
-						alt="about_card_2"
+						alt={tAlt("cardShamir")}
 						width={702}
 						height={424}
 						className="absolute top-1/2 left-1/2 max-w-[702px] max-h-[424px] -translate-x-1/2 -translate-y-1/2 object-cover"
@@ -131,7 +137,7 @@ const AboutCards = () => {
 					</p>
 				</div>
 				<div className="relative flex flex-col items-center justify-center gap-[10px] h-[240px] p-[20px] bg-[#EBF1FA] rounded-[32px] overflow-hidden">
-					<Image src="/about_card_3.svg" alt="about_card_3" width={90} height={90} />
+					<Image src="/about_card_3.svg" alt={tAlt("cardAes")} width={90} height={90} />
 					<p className="max-w-[300px] font-inter font-medium text-[18px] leading-[144%] text-[#141414] tracking-[0.007em] opacity-80 text-center">
 						{t("about.cards.3")}
 					</p>
@@ -140,7 +146,7 @@ const AboutCards = () => {
 					<p className="max-w-[300px] font-inter font-medium text-[18px] leading-[144%] text-[#141414] tracking-[0.007em] opacity-80 text-left">
 						{t("about.cards.4")}
 					</p>
-					<Image src="/about_card_4.svg" alt="about_card_4" width={243} height={81} />
+					<Image src="/about_card_4.svg" alt={tAlt("cardFree")} width={243} height={81} />
 				</div>
 			</div>
 		</Fragment>

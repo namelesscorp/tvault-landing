@@ -5,8 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
 
+import { HomeAnchorLink } from "../HomeAnchorLink";
+
 const MobileMenu = () => {
 	const t = useTranslations("HomePage.header");
+	const tAlt = useTranslations("alt");
 	const [isOpen, setIsOpen] = useState(false);
 
 	useEffect(() => {
@@ -17,10 +20,10 @@ const MobileMenu = () => {
 		<Fragment>
 			<Image
 				src="/icons/menu.svg"
-				alt="menu"
+				alt={tAlt("menu")}
 				width={36}
 				height={36}
-				className="cursor-pointer"
+				className="cursor-pointer invert"
 				onClick={() => setIsOpen(!isOpen)}
 			/>
 			{isOpen && (
@@ -32,35 +35,41 @@ const MobileMenu = () => {
 							Trust Vault
 						</Link>
 						<div className="p-[10px] cursor-pointer" onClick={() => setIsOpen(false)}>
-							<Image src="/icons/cross.svg" alt="close" width={20} height={20} />
+							<Image src="/icons/cross.svg" alt={tAlt("close")} width={20} height={20} />
 						</div>
 					</div>
 					<div className="mt-[60px] flex flex-col gap-[36px] items-end">
-						<Link
-							href="#about"
+						<HomeAnchorLink
+							href="#overview"
 							className="font-inter font-medium text-[15px] tracking-[0.007em] text-[#FFFFFF]"
 							onClick={() => setIsOpen(false)}>
-							{t("about")}
-						</Link>
-						<Link
+							{t("links.navigation.overview")}
+						</HomeAnchorLink>
+						<HomeAnchorLink
+							href="#features"
+							className="font-inter font-medium text-[15px] tracking-[0.007em] text-[#FFFFFF]"
+							onClick={() => setIsOpen(false)}>
+							{t("links.navigation.features")}
+						</HomeAnchorLink>
+						<HomeAnchorLink
 							href="#versions"
 							className="font-inter font-medium text-[15px] tracking-[0.007em] text-[#FFFFFF]"
 							onClick={() => setIsOpen(false)}>
-							{t("versions")}
-						</Link>
-						<Link
-							href="#plans"
+							{t("links.navigation.versions")}
+						</HomeAnchorLink>
+						<HomeAnchorLink
+							href="#roadmap"
 							className="font-inter font-medium text-[15px] tracking-[0.007em] text-[#FFFFFF]"
 							onClick={() => setIsOpen(false)}>
-							{t("plans")}
-						</Link>
-						<Link href="#download" onClick={() => setIsOpen(false)}>
+							{t("links.navigation.roadmap")}
+						</HomeAnchorLink>
+						<HomeAnchorLink href="#download" onClick={() => setIsOpen(false)}>
 							<div className="flex items-center justify-center px-[28px] h-[46px] rounded-[14px] border border-white ">
 								<p className="font-inter font-medium text-[15px] tracking-[-0.04em] text-[#FFFFFF] leading-[100%]">
 									{t("download")}
 								</p>
 							</div>
-						</Link>
+						</HomeAnchorLink>
 						<div className="flex items-center gap-[32px]">
 							<Link
 								href="/ru"

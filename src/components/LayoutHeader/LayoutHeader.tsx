@@ -1,38 +1,55 @@
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import Link from "next/link";
 
+import { HomeAnchorLink } from "../HomeAnchorLink";
+import { links } from "../Links";
 import { MobileMenu } from "../MobileMenu";
 import { SelectLanguage } from "../SelectLanguage";
+import { SelectResources } from "../SelectResources";
 
 const LayoutHeader = () => {
 	const t = useTranslations("HomePage.header");
+	const tAlt = useTranslations("alt");
 
 	return (
-		<header className="absolute top-0 left-0 w-full z-10 p-[25px] flex justify-between items-center">
-			<Link href="/" className="font-inter italic font-extrabold text-[22px] tracking-[-0.055em] text-white">
-				Trust Vault
+		<header className="w-full z-10 px-[20px] py-[22px] lg:px-[50px] flex justify-between items-center bg-[#F5F7FF]/50 border-b border-[#E5E6EA]/60">
+			<Link href="/" className="flex items-center gap-[15px]">
+				<Image src="/logo.svg" alt={tAlt("logo")} width={60} height={60} className="rounded-[10px]" />
+				<p className="font-inter font-extrabold text-[32px] tracking-[-0.05em] text-black">Trust Vault</p>
 			</Link>
 			<div className="block lg:hidden">
 				<MobileMenu />
 			</div>
-			<div className="hidden lg:flex gap-[25px] items-center">
+			<div className="hidden lg:flex gap-[20px] items-center">
+				{links[0]
+					.filter(link => link.titleKey !== "download")
+					.map(link =>
+						link.href.startsWith("#") ? (
+							<HomeAnchorLink
+								key={link.titleKey}
+								href={link.href}
+								className="font-inter font-medium text-[20px] tracking-[-0.04em] text-black/70">
+								{t(`links.navigation.${link.titleKey}`)}
+							</HomeAnchorLink>
+						) : (
+							<Link
+								key={link.titleKey}
+								href={link.href}
+								className="font-inter font-medium text-[20px] tracking-[-0.04em] text-black/70">
+								{t(`links.navigation.${link.titleKey}`)}
+							</Link>
+						),
+					)}
+				<SelectResources />
 				<SelectLanguage />
-				<Link href="#about" className="font-inter font-medium text-[18px] tracking-[-0.04em] text-[#FFFFFF]">
-					{t("about")}
-				</Link>
-				<Link href="#versions" className="font-inter font-medium text-[18px] tracking-[-0.04em] text-[#FFFFFF]">
-					{t("versions")}
-				</Link>
-				<Link href="#plans" className="font-inter font-medium text-[18px] tracking-[-0.04em] text-[#FFFFFF]">
-					{t("plans")}
-				</Link>
-				<Link href="#download">
-					<div className="flex items-center justify-center px-[20px] h-[44px] bg-[#D2D2D2]/20 rounded-[14px] hover:bg-[#D2D2D2]/40 transition-all duration-300">
-						<p className="font-inter font-medium text-[18px] tracking-[-0.04em] text-[#FFFFFF] leading-[100%]">
+				<HomeAnchorLink href="#download" className="cursor-pointer">
+					<div className="flex items-center justify-center px-[20px] h-[44px] bg-[#3A73ED] rounded-[14px] hover:bg-[#3A73ED]/90 transition-all duration-300">
+						<p className="font-inter font-medium text-[20px] tracking-[-0.05em] text-[#FFFFFF] leading-[100%]">
 							{t("download")}
 						</p>
 					</div>
-				</Link>
+				</HomeAnchorLink>
 			</div>
 		</header>
 	);

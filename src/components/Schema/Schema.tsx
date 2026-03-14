@@ -38,10 +38,14 @@ const Schema = async ({ locale }: { locale: string }) => {
                     {
                         "@context":"https://schema.org",
                         "@type":"Organization",
-                        "name":"NameLess",
+                        "name":"Nameless",
                         "url":"https://tvault.app/",
                         "logo":"https://tvault.app/nameless_logo.svg",
-                        "sameAs":["https://github.com/namelesscorp"]
+                        "sameAs":[
+                            "https://github.com/namelesscorp",
+                            "https://x.com/tvault_app",
+                            "https://t.me/tvault_app"
+                        ]
                     }
                 `}
 			</script>

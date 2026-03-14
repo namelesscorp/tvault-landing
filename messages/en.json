@@ -2,14 +2,81 @@
 	"metadata": {
 		"title": "Trust Vault — Secure Data Storage and Transfer",
 		"description": "Create reliable encrypted containers, distribute access with ease, and securely transfer data without risk. Open-source solution with modern encryption algorithms.",
-		"keywords": "secure storage, encrypted file sharing, AES-256, zero-knowledge, privacy, cybersecurity, data protection, information security, open source security, secure collaboration, Shamir's Secret Sharing, passwordless access, secure cloud, data encryption, end-to-end encryption"
+		"keywords": "secure storage, encrypted file sharing, AES-256, zero-knowledge, privacy, cybersecurity, data protection, information security, open source security, secure collaboration, Shamir's Secret Sharing, passwordless access, secure cloud, data encryption, end-to-end encryption",
+		"reviews": {
+			"title": "Reviews — Trust Vault",
+			"description": "Reviews and articles about Trust Vault: secure data storage and transfer from tech publications and users."
+		},
+		"pressKit": {
+			"title": "Press Kit — Trust Vault",
+			"description": "Trust Vault press kit: application screenshots, logos, and media assets for journalists and partners."
+		},
+		"faq": {
+			"title": "FAQ — Trust Vault",
+			"description": "Frequently asked questions about Trust Vault: encryption, security, installation, and usage."
+		},
+		"privacy": {
+			"title": "Privacy Policy — Trust Vault",
+			"description": "How Trust Vault collects, uses, and protects your information when you use our website and services."
+		},
+		"terms": {
+			"title": "Terms of Service — Trust Vault",
+			"description": "Terms of Service governing your access to and use of the TVault website and services."
+		}
+	},
+	"alt": {
+		"arrowPrev": "Previous",
+		"arrowNext": "Next",
+		"logo": "Trust Vault logo",
+		"namelessLogo": "Nameless",
+		"menu": "Open menu",
+		"close": "Close menu",
+		"languageExpand": "Select language",
+		"cardOpenSource": "Open source project",
+		"cardShamir": "Shamir's Secret Sharing diagram",
+		"cardAes": "AES-256 encryption icon",
+		"cardFree": "Free single version badge",
+		"plansArrow": "Next step",
+		"singleVersionSlide": "Trust Vault Single version screenshot"
 	},
 	"HomePage": {
 		"header": {
 			"about": "About",
 			"versions": "Versions",
 			"plans": "Plans",
-			"download": "Download"
+			"download": "Download",
+			"links": {
+				"navigation": {
+					"title": "Navigation",
+					"overview": "Overview",
+					"download": "Download",
+					"roadmap": "Roadmap",
+					"features": "Features",
+					"versions": "Versions"
+				},
+				"resources": {
+					"title": "Resources",
+					"documentation": "Documentation",
+					"comparisons": "Comparisons",
+					"community": "Community",
+					"nameless": "Nameless",
+					"pressKit": "Press Kit",
+					"contact": "Contact",
+					"reviews": "Reviews",
+					"faq": "FAQ"
+				},
+				"socials": {
+					"title": "Socials",
+					"x": "X (ex. Twitter)",
+					"telegram": "Telegram",
+					"github": "GitHub"
+				},
+				"bottom": {
+					"privacyPolicy": "Privacy Policy",
+					"termsOfService": "Terms of Service",
+					"license": "License"
+				}
+			}
 		},
 		"main": {
 			"title": "Store and transmit data with confidence",
@@ -46,21 +113,6 @@
 				"4": "COMPANy",
 				"5": "Professional",
 				"6": "Trust"
-			}
-		},
-		"versions": {
-			"title": "Versions",
-			"single": {
-				"title": "SINGLE",
-				"text": "Perfect for personal use or small teams. Secure your data fully — no sign-ups, no subscriptions, no limits."
-			},
-			"enterprise": {
-				"title": "ENTERPRISE (SOON)",
-				"text": "Full control and compliance. Deploy on your own infrastructure, integrate seamlessly with corporate systems, and adhere to top security standards."
-			},
-			"cloud": {
-				"title": "CLOUD (SOON)",
-				"text": "Get started instantly — no server setup required. Access and manage your secure containers from any device, anywhere."
 			}
 		},
 		"single": {
@@ -101,7 +153,438 @@
 				"1": "Got questions?",
 				"2": "Send us a message"
 			},
-			"copyright": "All rights reserved"
+			"text": "Your personal data safe designed with security, privacy, and convenience in mind. Open source, locally controlled, and built for trust.",
+			"copyright": "All rights reserved",
+			"links": {
+				"bottom": {
+					"privacyPolicy": "Privacy Policy",
+					"termsOfService": "Terms of Service",
+					"license": "License"
+				}
+			}
+		},
+		"hero": {
+			"subtitle": "Your personal data safe designed with security, privacy, and convenience in\u00a0mind",
+			"description": "Store and transmit data with confidence using reliable encrypted containers. Securely transfer data without risk — total control is\u00a0yours.",
+			"download": "Download Personal Version",
+			"learnMore": "Learn More",
+			"noSignups": "No\u00a0sign-ups",
+			"noServers": "No\u00a0servers",
+			"noInternet": "No\u00a0internet required"
+		},
+		"capabilities": {
+			"title": "Core Capabilities",
+			"text": "Built with security, privacy, and convenience as our foundation",
+			"items": {
+				"1": {
+					"icon": "shield.svg",
+					"title": "Open Source",
+					"text": "Our project is open source, allowing for community scrutiny and validation to ensure transparency and trust."
+				},
+				"2": {
+					"icon": "key.svg",
+					"title": "Multi-access Control",
+					"text": "Shamir's Secret Sharing provides advanced multi-access control, ensuring your data remains secure even with distributed access."
+				},
+				"3": {
+					"icon": "lock.svg",
+					"title": "Strong Encryption",
+					"text": "AES-256 encryption provides military-grade security for all your sensitive data, both at rest and in transit."
+				},
+				"4": {
+					"icon": "eye.svg",
+					"title": "Privacy-First",
+					"text": "No sign-ups, no servers, no internet required for the Personal version. Your data never leaves your control."
+				},
+				"5": {
+					"icon": "database.svg",
+					"title": "Local Storage",
+					"text": "Data is stored locally on your device, giving you complete control and eliminating third-party risks."
+				},
+				"6": {
+					"icon": "zap.svg",
+					"title": "Easy to Use",
+					"text": "Despite advanced security features, Trust Vault is designed for convenience and ease of use."
+				}
+			},
+			"bottom": {
+				"title": "Military-Grade Security",
+				"text": "Trust Vault combines industry-leading encryption standards with innovative access control mechanisms to provide unparalleled security for your most sensitive data.",
+				"encryption": "256-bit AES Encryption",
+				"shamir": "Shamir's Secret Sharing",
+				"openSource": "Open Source Verified"
+			}
+		},
+		"overview": {
+			"title": "Overview",
+			"text": "Explore the interface and features of Trust Vault through screenshots and video demos. See how the most secure data storage solution works.",
+			"galleryTitle": "Application Gallery"
+		},
+		"whoIs": {
+			"title": "Who is Trust Vault For?",
+			"text": "See how Trust Vault protects and organizes your most valuable digital assets across different industries and use cases with cutting-edge security technology.",
+			"benefits": "Key benefits:",
+			"items": {
+				"1": {
+					"title": "Business & Enterprise",
+					"text": "Secure corporate data management and compliance solutions for organizations of all sizes.",
+					"benefits": {
+						"1": "Enterprise-grade security",
+						"2": "Compliance management",
+						"3": "Team collaboration tools",
+						"4": "Advanced access controls"
+					}
+				},
+				"2": {
+					"title": "Individual Users",
+					"text": "Personal data protection and privacy solutions for individuals and families.",
+					"benefits": {
+						"1": "Personal file encryption",
+						"2": "Family account sharing",
+						"3": "Mobile device sync",
+						"4": "Easy-to-use interface"
+					}
+				},
+				"3": {
+					"title": "Developers & IT",
+					"text": "Advanced tools and APIs for developers building secure applications and systems.",
+					"benefits": {
+						"1": "CLI & API access",
+						"2": "SDK integration",
+						"3": "Custom encryption options",
+						"4": "Developer documentation"
+					}
+				},
+				"4": {
+					"title": "Journalists & Media",
+					"text": "Secure communication and source protection for media professionals and journalists.",
+					"benefits": {
+						"1": "Source protection",
+						"2": "Encrypted messaging",
+						"3": "Anonymous file sharing",
+						"4": "Whistleblower support"
+					}
+				},
+				"5": {
+					"title": "Family Heritage",
+					"text": "Securely preserve and pass down important family documents, memories, and digital assets to future generations.",
+					"benefits": {
+						"1": "Secure storage of family archives",
+						"2": "Inheritance of important documents",
+						"3": "Protection of digital assets and passwords",
+						"4": "Private access for trusted family members"
+					}
+				},
+				"6": {
+					"title": "Legal Professionals",
+					"text": "Attorney-client privilege protection and secure legal document management.",
+					"benefits": {
+						"1": "Legal privilege protection",
+						"2": "Case file security",
+						"3": "Client confidentiality",
+						"4": "Audit trail logging"
+					}
+				}
+			}
+		},
+		"versions": {
+			"title": "Choose Your Version",
+			"text": "From local-first security to enterprise-grade solutions",
+			"bottomText": "All versions include our core security features: AES-256 encryption and Shamir's Secret Sharing.",
+			"available": "Available Now",
+			"comingSoon": "Coming Soon",
+			"downloadNow": "Download Now",
+			"getNotified": "Get Notified",
+			"recommended": "Recommended",
+			"openSource": "Open Source",
+			"crossPlatform": "Cross-Platform",
+			"regularUpdates": "Regular Updates",
+			"personal": {
+				"title": "Personal",
+				"text": "Standalone, local application",
+				"items": {
+					"1": "No sign-ups required",
+					"2": "No servers needed",
+					"3": "No internet required",
+					"4": "Complete local control",
+					"5": "AES-256 encryption",
+					"6": "Cross-platform support"
+				}
+			},
+			"enterprise": {
+				"title": "Enterprise",
+				"text": "Advanced features for organizations",
+				"items": {
+					"1": "Team collaboration",
+					"2": "Advanced access controls",
+					"3": "Audit logging",
+					"4": "Enterprise integrations",
+					"5": "Priority support",
+					"6": "Custom deployment"
+				}
+			},
+			"cloud": {
+				"title": "Cloud",
+				"text": "Secure cloud synchronization",
+				"items": {
+					"1": "Cross-device sync",
+					"2": "Cloud backup",
+					"3": "Remote access",
+					"4": "Shared containers",
+					"5": "Web interface",
+					"6": "Mobile apps"
+				}
+			}
+		},
+		"download": {
+			"title": "Download Trust Vault",
+			"text": "Get started with the Personal version — available now for all major platforms",
+			"badge": "Personal Version — Free & Open Source",
+			"windows": {
+				"title": "Windows",
+				"info": "v1.2.0",
+				"download": "Download .exe"
+			},
+			"macos": {
+				"title": "MacOS",
+				"info": "v1.2.0 • 45 MB",
+				"download": "Download .dmg"
+			},
+			"linux": {
+				"title": "Linux",
+				"info": "v1.2.0 • 45 MB",
+				"download": "Download .AppImage"
+			},
+			"installationNotes": {
+				"title": "Installation Notes",
+				"items": {
+					"1": "No internet connection required",
+					"2": "No user registration needed",
+					"3": "Portable version available",
+					"4": "Automatic updates optional",
+					"5": "Full offline functionality"
+				}
+			},
+			"downloadByPlatform": {
+				"title": "Download By Platforms",
+				"items": {
+					"1": {
+						"platform": "MacOS",
+						"intel": "Intel",
+						"appleSilicon": "Apple Silicon"
+					},
+					"2": {
+						"platform": "Windows",
+						"x64": "64-bit",
+						"x86": "32-bit"
+					},
+					"3": {
+						"platform": "Linux",
+						"appImage": "AppImage"
+					}
+				}
+			},
+			"security": {
+				"title": "Security Notice!",
+				"text": "Always download Trust Vault from official sources. Verify the digital signature after download to ensure authenticity. Our releases are signed and can be verified through our public key available on our GitHub repository."
+			},
+			"openSource": "Trust Vault is open source. View the code, report issues, or contribute on GitHub.",
+			"viewOnGitHub": "View on GitHub"
+		},
+		"roadmap": {
+			"title": "Product Roadmap",
+			"text": "Our journey from command-line tool to comprehensive secure data platform",
+			"completed": "Completed",
+			"current": "Current",
+			"planned": "Planned",
+			"items": {
+				"1": {
+					"title": "CORE + CLI",
+					"text": "Command-line interface with core encryption functionality",
+					"info": {
+						"1": "AES-256 encryption implementation",
+						"2": "Shamir's Secret Sharing",
+						"3": "Basic CLI operations",
+						"4": "Cross-platform support"
+					}
+				},
+				"2": {
+					"title": "Personal (Beta)",
+					"text": "Graphical user interface for local application",
+					"info": {
+						"1": "Simple and intuitive interface",
+						"2": "Full control over access to your data",
+						"3": "Secure local storage for sensitive files",
+						"4": "Enhanced user experience"
+					}
+				},
+				"3": {
+					"title": "Personal (Stable)",
+					"text": "Production-ready personal-user application",
+					"info": {
+						"1": "Stable release version",
+						"2": "Performance optimizations",
+						"3": "Comprehensive testing",
+						"4": "Documentation & support"
+					}
+				},
+				"4": {
+					"title": "Cloud",
+					"text": "Secure cloud synchronization and backup",
+					"info": {
+						"1": "End-to-end encrypted sync",
+						"2": "Multi-device access",
+						"3": "Cloud backup options",
+						"4": "Web interface"
+					}
+				},
+				"5": {
+					"title": "Enterprise",
+					"text": "Advanced features for organizations",
+					"info": {
+						"1": "Team collaboration",
+						"2": "Advanced access controls",
+						"3": "Audit logging",
+						"4": "Enterprise integrations"
+					}
+				}
+			},
+			"vision": {
+				"title": "Our Vision",
+				"text": "To create the most trusted and user-friendly secure data storage platform, empowering individuals and organizations to maintain complete control over their sensitive information while enjoying seamless access across all their devices.",
+				"items": {
+					"1": "Personal",
+					"2": "Cloud",
+					"3": "Enterprise"
+				}
+			},
+			"bottom": {
+				"title": "Stay updated with Trust Vault",
+				"text": "Get notified about new releases, beta access, and important updates across all platforms",
+				"email": "Enter your email address",
+				"subscribe": "Subscribe to Updates",
+				"sending": "Sending...",
+				"sent": "Sent!",
+				"agree": "I agree to get updates from Trust Vault and accept the",
+				"privacy": "Privacy Policy",
+				"follow": "Follow us on social media"
+			}
 		}
+	},
+	"FAQ": {
+		"title": "FAQ",
+		"sections": {
+			"1": {
+				"title": "General Questions about Trust Vault",
+				"items": {
+					"1": {
+						"question": "What is Trust Vault / TVault?",
+						"answer": "It’s a desktop app for creating encrypted vault containers."
+					},
+					"2": {
+						"question": "What is a \"vault\" in Trust Vault?",
+						"answer": "A vault is an encrypted folder/container: when locked it’s inaccessible, and when unlocked it behaves like a normal folder."
+					},
+					"3": {
+						"question": "Which operating systems does the Personal version support?",
+						"answer": "The Personal version is available for Windows (32/64‑bit), macOS (Intel/Apple Silicon) and Linux (AppImage)."
+					},
+					"4": {
+						"question": "Do I need an account, subscription, or constant internet for Personal version?",
+						"answer": "The Personal version does not require mandatory registration/servers/internet for local use."
+					},
+					"5": {
+						"question": "What encryption algorithm is used in Trust Vault?",
+						"answer": "AES‑256 encryption is used in Trust Vault."
+					}
+				}
+			}
+		}
+	},
+	"SubscribeModal": {
+		"title": "Stay Updated with Trust Vault",
+		"text": "Get notified about new releases, beta access, and important updates across all platforms",
+		"form": {
+			"name": "Full Name",
+			"email": "Email Address",
+			"namePlaceholder": "Enter your full name",
+			"emailPlaceholder": "Enter your email address",
+			"subscribe": "Subscribe to Updates",
+			"sending": "Sending...",
+			"sent": "Sent!",
+			"agree": "I agree to get updates from Trust Vault and accept the",
+			"privacy": "Privacy Policy"
+		}
+	},
+	"Gallery": {
+		"download": "Download image",
+		"openInNewTab": "Open in new tab",
+		"categories": {
+			"all": "All",
+			"desktop": "Desktop",
+			"features": "Features",
+			"reviews": "Reviews",
+			"logos": "Logos"
+		},
+		"tags": {
+			"overview": "Overview",
+			"tutorial": "Tutorial",
+			"logos": "Logos",
+			"nameless": "Nameless",
+			"tvault": "Trust Vault",
+			"review": "Review"
+		},
+		"items": {
+			"titles": {
+				"reviewAllYourTech": "AllYourTech",
+				"reviewProductCool": "ProductCool",
+				"reviewScoutForge": "Scout Forge",
+				"reviewStartUpRanking": "StartUp Ranking",
+				"1": "Personal Version: Container creation",
+				"2": "Personal Version: Container",
+				"3": "Personal Version: Settings",
+				"4": "Logo Trust Vault black",
+				"5": "Logo Trust Vault blue",
+				"6": "Nameless logo",
+				"7": "Nameless logo transparent",
+				"8": "Nameless logo",
+				"9": "Personal Version: Opening container",
+				"10": "Personal Version: Container opened"
+			},
+			"descriptions": {
+				"reviewAllYourTech": "Trust Vault offers secure data storage and transfer with encrypted containers, multi-access control, and open-source transparency. Encrypted containers, Shamir's Secret Sharing, AES-256, standalone operation without sign-ups or servers.",
+				"reviewProductCool": "Open-source solution for creating encrypted containers and securely transferring sensitive data. Military-grade encryption with flexible access management. AES-256-GCM, PBKDF2, Shamir's Secret Sharing — from personal use to enterprise roadmap.",
+				"reviewScoutForge": "Trust Vault on Scout Forge — a platform for unbiased reviews of newly launched applications. Explore overview, design, security, and alternatives.",
+				"reviewStartUpRanking": "Trust Vault on StartUp Ranking — startup profile with rankings, metrics, and discovery for innovative products.",
+				"1": "Create a new encrypted vault for secure file storage. The container is initialized with cryptographic parameters and configured for access using share tokens or a master token.",
+				"2": "Encrypted storage for your files and folders. Access is granted only when the required number of key shares is provided, ensuring a high level of security and access control.",
+				"3": "Settings — a section for configuring the main application parameters, including the container storage path, interface language, and update management",
+				"4": "Logo Trust Vault black",
+				"5": "Logo Trust Vault blue",
+				"6": "Nameless logo",
+				"7": "Nameless logo transparent",
+				"8": "Nameless logo",
+				"9": "Open the encrypted container and gain access to the files inside. To unlock it, access confirmation is required using share tokens or master token.",
+				"10": "View information about the opened container, edit its metadata (Name, Comment, Tags), and manage the container using the \"Open folder\", \"Save\", and \"Close\" actions."
+			}
+		}
+	},
+	"PressKit": {
+		"title": "Press Kit",
+		"applicationGallery": "Application Gallery",
+		"logos": "Logos"
+	},
+	"Reviews": {
+		"title": "Reviews",
+		"articles": "Articles"
+	},
+	"CookieBanner": {
+		"title": "Cookies & Analytics",
+		"text": {
+			"line1": "We use cookies and analytics tools (Google Analytics and Yandex Metrica) to understand how visitors use our website and to improve our services.",
+			"line2": "By continuing to use this website, you agree to the use of cookies and analytics as described in our Privacy Policy.",
+			"line3": "If you do not agree with this, please stop using the website."
+		},
+		"close": "Close"
 	}
 }
