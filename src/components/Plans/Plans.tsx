@@ -17,6 +17,7 @@ const classNames = {
 
 const Plans = () => {
 	const t = useTranslations("HomePage.plans");
+	const tAlt = useTranslations("alt");
 	const [currentSlide, setCurrentSlide] = useState(0);
 	const nodeRefNumbers = useRef(null);
 	const nodeRefText = useRef(null);
@@ -37,7 +38,7 @@ const Plans = () => {
 						onClick={handlePrevSlide}>
 						<Image
 							src="/icons/arrow_right_2.svg"
-							alt="arrow_right_2"
+							alt={tAlt("arrowPrev")}
 							width={24}
 							height={24}
 							className="rotate-180 user-select-none pointer-events-none"
@@ -99,7 +100,7 @@ const Plans = () => {
 						onClick={handleNextSlide}>
 						<Image
 							src="/icons/arrow_right_2.svg"
-							alt="arrow_right_2"
+							alt={tAlt("arrowNext")}
 							width={24}
 							height={24}
 							className="user-select-none pointer-events-none"
@@ -135,7 +136,7 @@ const Plans = () => {
 						<div className="overflow-hidden flex-shrink-0 min-w-0 w-[50%]">
 							<Image
 								src="/plans_arrow.svg"
-								alt="plans_arrow"
+								alt={tAlt("plansArrow")}
 								width={185}
 								height={29}
 								className="object-contain"
@@ -157,7 +158,7 @@ const Plans = () => {
 						<div className="overflow-hidden flex-shrink-0 min-w-0  w-[50%]">
 							<Image
 								src="/plans_arrow.svg"
-								alt="plans_arrow"
+								alt={tAlt("plansArrow")}
 								width={185}
 								height={29}
 								className="object-contain"
@@ -179,7 +180,7 @@ const Plans = () => {
 						<div className="overflow-hidden flex-shrink-0 min-w-0  w-[50%]">
 							<Image
 								src="/plans_arrow.svg"
-								alt="plans_arrow"
+								alt={tAlt("plansArrow")}
 								width={185}
 								height={29}
 								className="object-contain"

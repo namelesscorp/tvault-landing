@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Fragment } from "react";
 
@@ -5,16 +6,49 @@ import { ImgIcon } from "~/components/ImgIcon";
 import { LayoutFooter } from "~/components/LayoutFooter";
 import { LayoutHeader } from "~/components/LayoutHeader";
 import { cn } from "~/utils/css";
+import { buildAlternates, getBaseUrl } from "~/utils/seo";
 
 const sectionsCount = 1;
 const itemsCountBySection = [5];
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+	const { locale } = await params;
+	const t = await getTranslations({ locale, namespace: "metadata.faq" });
+	const path = "/faq";
+	const canonicalUrl = `${getBaseUrl()}/${locale}${path}`;
+	return {
+		title: t("title"),
+		description: t("description"),
+		alternates: buildAlternates(locale, path),
+		openGraph: { url: canonicalUrl },
+		twitter: { card: "summary_large_image" },
+	};
+}
 
 export default async function FaqPage({ params }: { params: Promise<{ locale: string }> }) {
 	const { locale } = await params;
 	const t = await getTranslations({ locale, namespace: "FAQ" });
 
+	const faqEntities = new Array(sectionsCount).fill(0).flatMap((_, sectionIndex) =>
+		new Array(itemsCountBySection[sectionIndex]).fill(0).map((__, itemIndex) => ({
+			"@type": "Question",
+			name: t(`sections.${sectionIndex + 1}.items.${itemIndex + 1}.question`),
+			acceptedAnswer: {
+				"@type": "Answer",
+				text: t(`sections.${sectionIndex + 1}.items.${itemIndex + 1}.answer`),
+			},
+		})),
+	);
+
+	const faqSchema = {
+		"@context": "https://schema.org",
+		"@type": "FAQPage",
+		mainEntity: faqEntities,
+	};
+
 	return (
 		<Fragment>
+			<script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
 			<LayoutHeader />
 			<main>
 				<section className="pt-[50px] px-[25px] py-[40px] lg:px-[40px] lg:py-[50px]">

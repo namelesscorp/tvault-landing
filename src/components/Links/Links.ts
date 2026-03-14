@@ -52,10 +52,10 @@ export const links = [
 			titleKey: "reviews",
 			href: "/reviews",
 		},
-		// {
-		// 	titleKey: "faq",
-		// 	href: "/faq",
-		// },
+		{
+			titleKey: "faq",
+			href: "/faq",
+		},
 	],
 	[
 		{
@@ -74,14 +74,14 @@ export const links = [
 ];
 
 export const bottomLinks = [
-	// {
-	// 	titleKey: "privacyPolicy",
-	// 	href: "#",
-	// },
-	// {
-	// 	titleKey: "termsOfService",
-	// 	href: "#",
-	// },
+	{
+		titleKey: "privacyPolicy",
+		href: "/privacy",
+	},
+	{
+		titleKey: "termsOfService",
+		href: "/terms",
+	},
 	{
 		titleKey: "license",
 		href: "https://github.com/namelesscorp/tvault/blob/master/LICENSE",

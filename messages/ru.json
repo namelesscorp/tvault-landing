@@ -2,7 +2,42 @@
 	"metadata": {
 		"title": "Trust Vault — Безопасное хранение и передача данных",
 		"description": "Создавайте надёжные зашифрованные контейнеры, делите доступ между участниками и безопасно передавайте данные без риска. Open-source решение с современными криптоалгоритмами.",
-		"keywords": "защита данных, шифрование файлов, AES-256, безопасное хранение, защищённое облако, приватность, информационная безопасность, открытый код, безопасность файлов, end-to-end шифрование, секретное разделение Шамира, безопасный обмен файлами, кибербезопасность"
+		"keywords": "защита данных, шифрование файлов, AES-256, безопасное хранение, защищённое облако, приватность, информационная безопасность, открытый код, безопасность файлов, end-to-end шифрование, секретное разделение Шамира, безопасный обмен файлами, кибербезопасность",
+		"reviews": {
+			"title": "Отзывы — Trust Vault",
+			"description": "Обзоры и статьи о Trust Vault: безопасное хранение и передача данных от изданий и пользователей."
+		},
+		"pressKit": {
+			"title": "Пресс-кит — Trust Vault",
+			"description": "Пресс-кит Trust Vault: скриншоты приложения, логотипы и медиаматериалы для журналистов и партнёров."
+		},
+		"faq": {
+			"title": "Часто задаваемые вопросы — Trust Vault",
+			"description": "Ответы на частые вопросы о Trust Vault: шифрование, безопасность, установка и использование."
+		},
+		"privacy": {
+			"title": "Политика конфиденциальности — Trust Vault",
+			"description": "Как Trust Vault собирает, использует и защищает ваши данные при использовании сайта и сервисов."
+		},
+		"terms": {
+			"title": "Условия использования — Trust Vault",
+			"description": "Пользовательское соглашение об использовании сайта и сервисов TVault."
+		}
+	},
+	"alt": {
+		"arrowPrev": "Назад",
+		"arrowNext": "Вперёд",
+		"logo": "Логотип Trust Vault",
+		"namelessLogo": "Nameless",
+		"menu": "Открыть меню",
+		"close": "Закрыть",
+		"languageExpand": "Выбор языка",
+		"cardOpenSource": "Проект с открытым исходным кодом",
+		"cardShamir": "Схема секретного разделения Шамира",
+		"cardAes": "Иконка шифрования AES-256",
+		"cardFree": "Значок бесплатной single версии",
+		"plansArrow": "Следующий шаг",
+		"singleVersionSlide": "Скриншот Trust Vault Single"
 	},
 	"HomePage": {
 		"header": {
@@ -430,7 +465,7 @@
 				"subscribe": "Подписаться",
 				"sending": "Отправляем...",
 				"sent": "Отправлено",
-				"agree": "Я согласен получать обновления от Trust Vault",
+				"agree": "Я согласен получать обновления от Trust Vault и принимаю",
 				"privacy": "Политику конфиденциальности",
 				"follow": "Следите за нами в социальных сетях"
 			}
@@ -443,24 +478,24 @@
 				"title": "General Questions about Trust Vault",
 				"items": {
 					"1": {
-						"question": "What is Trust Vault?",
-						"answer": "Trust Vault is a secure data storage and transfer solution that allows you to store and transfer data securely."
+						"question": "Что такое Trust Vault / TVault?",
+						"answer": "Это desktop‑приложение для создания зашифрованных контейнеров (vault)."
 					},
 					"2": {
-						"question": "What is Trust Vault?",
-						"answer": "Trust Vault is a secure data storage and transfer solution that allows you to store and transfer data securely."
+						"question": "Что такое «vault» в контексте Trust Vault?",
+						"answer": "Vault — это «зашифрованная папка/контейнер»: в закрытом состоянии данные недоступны, в открытом — ведёт себя как обычная папка."
 					},
 					"3": {
-						"question": "What is Trust Vault?",
-						"answer": "Trust Vault is a secure data storage and transfer solution that allows you to store and transfer data securely."
+						"question": "Какие ОС поддерживает Personal‑версия?",
+						"answer": "Personal‑версия доступна для Windows (32/64‑bit), macOS (Intel/Apple Silicon) и Linux (AppImage)."
 					},
 					"4": {
-						"question": "What is Trust Vault?",
-						"answer": "Trust Vault is a secure data storage and transfer solution that allows you to store and transfer data securely."
+						"question": "Нужны ли аккаунт, подписка или постоянный интернет для Personal-версии?",
+						"answer": "Personal-версия не требует обязательной регистрации/серверов/интернета для локального использования."
 					},
 					"5": {
-						"question": "What is Trust Vault?",
-						"answer": "Trust Vault is a secure data storage and transfer solution that allows you to store and transfer data securely."
+						"question": "Какой алгоритм шифрования используется в Trust Vault?",
+						"answer": "В Trust Vault используется алгоритм шифрования AES‑256."
 					}
 				}
 			}
@@ -477,20 +512,61 @@
 			"subscribe": "Подписаться на обновления",
 			"sending": "Отправляем...",
 			"sent": "Отправлено",
-			"agree": "Я согласен получать обновления от Trust Vault",
+			"agree": "Я согласен получать обновления от Trust Vaul и принимаю",
 			"privacy": "Политику конфиденциальности"
 		}
 	},
 	"Gallery": {
+		"download": "Скачать изображение",
+		"openInNewTab": "Открыть в новой вкладке",
 		"categories": {
 			"all": "Все",
 			"desktop": "ПК",
 			"features": "Возможности",
-			"reviews": "Отзывы"
+			"reviews": "Отзывы",
+			"logos": "Логотипы"
 		},
 		"tags": {
 			"overview": "Обзор",
-			"tutorial": "Туториал"
+			"tutorial": "Туториал",
+			"logos": "Логотипы",
+			"nameless": "Nameless",
+			"tvault": "Trust Vault",
+			"review": "Обзор"
+		},
+		"items": {
+			"titles": {
+				"reviewAllYourTech": "AllYourTech",
+				"reviewProductCool": "ProductCool",
+				"reviewScoutForge": "Scout Forge",
+				"reviewStartUpRanking": "StartUp Ranking",
+				"1": "Personal Version: Создание контейнера",
+				"2": "Personal Version: Контейнер",
+				"3": "Personal Version: Настройки",
+				"4": "Логотип Trust Vault чёрный",
+				"5": "Логотип Trust Vault синий",
+				"6": "Логотип Nameless",
+				"7": "Логотип Nameless прозрачный",
+				"8": "Логотип Nameless",
+				"9": "Personal Version: Открытие контейнера",
+				"10": "Personal Version: Открытый контейнер"
+			},
+			"descriptions": {
+				"reviewAllYourTech": "Trust Vault — безопасное хранилище и передача данных: зашифрованные контейнеры, мульти-доступ (Shamir's Secret Sharing), AES-256, открытый код. Работа без регистрации и серверов.",
+				"reviewProductCool": "Открытое решение для зашифрованных контейнеров и безопасной передачи данных. Военное шифрование и гибкое управление доступом. AES-256-GCM, PBKDF2, Shamir's Secret Sharing — от личного использования до корпоративной версии.",
+				"reviewScoutForge": "Trust Vault на Scout Forge — платформа с объективными обзорами новых приложений. Обзор, дизайн, безопасность и альтернативы.",
+				"reviewStartUpRanking": "Trust Vault на StartUp Ranking — профиль стартапа с рейтингами, метриками и каталогом инновационных продуктов.",
+				"1": "Создайте новый зашифрованный сейф для безопасного хранения файлов. Контейнер инициализируется с криптографическими параметрами и настраивается для доступа через share tokens или master token.",
+				"2": "Зашифрованное хранилище для ваших файлов и папок. Доступ открывается только при наличии необходимого количества долей ключа, обеспечивая высокий уровень безопасности и контроля доступа.",
+				"3": "Настройки — раздел для настройки основных параметров приложения, включая путь хранения контейнеров, язык интерфейса и управление обновлениями.",
+				"4": "Логотип Trust Vault чёрный",
+				"5": "Логотип Trust Vault синий",
+				"6": "Логотип Nameless",
+				"7": "Логотип Nameless прозрачный",
+				"8": "Логотип Nameless",
+				"9": "Откройте зашифрованный контейнер и получите доступ к файлам внутри. Для разблокировки требуется подтверждение доступа с помощью share tokens или master token.",
+				"10": "Просматривайте информацию об открытом контейнере, редактируйте его метаданные (Имя, Комментарии, Теги), а также управляйте контейнером с помощью действий \"Открыть папку\", \"Сохранить\" и \"Закрыть\"."
+			}
 		}
 	},
 	"PressKit": {
@@ -501,5 +577,14 @@
 	"Reviews": {
 		"title": "Отзывы",
 		"articles": "Статьи"
+	},
+	"CookieBanner": {
+		"title": "Cookies и аналитика",
+		"text": {
+			"line1": "Мы используем cookies и инструменты аналитики (Google Analytics и Яндекс.Метрика), чтобы понимать, как посетители пользуются сайтом, и улучшать наши сервисы.",
+			"line2": "Продолжая пользоваться сайтом, вы соглашаетесь на использование cookies и аналитики, как описано в нашей Политике конфиденциальности.",
+			"line3": "Если вы не согласны, пожалуйста, прекратите использование сайта."
+		},
+		"close": "Закрыть"
 	}
 }

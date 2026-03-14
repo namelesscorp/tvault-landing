@@ -1,11 +1,13 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 const SelectLanguage = () => {
+	const tAlt = useTranslations("alt");
 	const params = useParams();
 	const pathname = usePathname();
 	const currentLocale = params.locale as string;
@@ -42,7 +44,7 @@ const SelectLanguage = () => {
 				</p>
 				<Image
 					src="/icons/arrow_down.svg"
-					alt="arrow_down"
+					alt={tAlt("languageExpand")}
 					width={13}
 					height={11}
 					className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}

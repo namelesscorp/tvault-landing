@@ -5,4 +5,5 @@ interface Window {
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		params?: Record<string, any>,
 	) => void;
+	ym: (counterId: number, method: string, goalName: string) => void;
 }

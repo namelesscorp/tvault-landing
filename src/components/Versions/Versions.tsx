@@ -58,7 +58,9 @@ const Versions = async ({ locale }: { locale: string }) => {
 							</div>
 						))}
 					</div>
-					<ButtonBlue className="w-[230px]">{t("versions.downloadNow")}</ButtonBlue>
+					<ButtonBlue className="w-[230px]" eventName="versions_personal_download">
+						{t("versions.downloadNow")}
+					</ButtonBlue>
 				</div>
 				<div className="flex flex-col items-center gap-[20px] p-[30px] bg-white/80 border-2 border-[#E6E7EB] rounded-[10px] transition-all duration-300 lg:hover:shadow-[0px_5px_5px_2px_rgba(0,0,0,0.1)] lg:hover:border-[#BCDBFE]">
 					<div className="flex items-center justify-center w-[80px] h-[80px] bg-[#DBE9FE] rounded-full">
@@ -85,7 +87,11 @@ const Versions = async ({ locale }: { locale: string }) => {
 							</div>
 						))}
 					</div>
-					<SubscribeModalWrapper buttonText={t("versions.getNotified")} className="w-[230px]" />
+					<SubscribeModalWrapper
+						buttonText={t("versions.getNotified")}
+						className="w-[230px]"
+						eventName="versions_enterprise_get_notified"
+					/>
 				</div>
 				<div className="flex flex-col items-center gap-[20px] p-[30px] bg-white/80 border-2 border-[#E6E7EB] rounded-[10px] transition-all duration-300 lg:hover:shadow-[0px_5px_5px_2px_rgba(0,0,0,0.1)] lg:hover:border-[#BCDBFE]">
 					<div className="flex items-center justify-center w-[80px] h-[80px] bg-[#DBE9FE] rounded-full">
@@ -112,7 +118,11 @@ const Versions = async ({ locale }: { locale: string }) => {
 							</div>
 						))}
 					</div>
-					<SubscribeModalWrapper buttonText={t("versions.getNotified")} className="w-[230px]" />
+					<SubscribeModalWrapper
+						buttonText={t("versions.getNotified")}
+						className="w-[230px]"
+						eventName="versions_cloud_get_notified"
+					/>
 				</div>
 			</div>
 			<p className="font-inter font-medium text-[20px] tracking-[-0.05em] text-black/70 text-center mt-[40px] leading-[110%]">

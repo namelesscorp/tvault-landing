@@ -1,45 +1,31 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Fragment } from "react";
 
 import { Gallery } from "~/components/Gallery";
-import { IGalleryItemProps } from "~/components/GalleryItem/GalleryItem.model";
 import { LayoutFooter } from "~/components/LayoutFooter";
 import { LayoutHeader } from "~/components/LayoutHeader";
+import { LOGOS_ITEMS, OVERVIEW_ITEMS } from "~/components/Overview/Overview.model";
 import { cn } from "~/utils/css";
+import { buildAlternates, getBaseUrl } from "~/utils/seo";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+	const { locale } = await params;
+	const t = await getTranslations({ locale, namespace: "metadata.pressKit" });
+	const path = "/press-kit";
+	const canonicalUrl = `${getBaseUrl()}/${locale}${path}`;
+	return {
+		title: t("title"),
+		description: t("description"),
+		alternates: buildAlternates(locale, path),
+		openGraph: { url: canonicalUrl },
+		twitter: { card: "summary_large_image" },
+	};
+}
 
 export default async function PressKitPage({ params }: { params: Promise<{ locale: string }> }) {
 	const { locale } = await params;
 	const t = await getTranslations({ locale, namespace: "PressKit" });
-
-	const overviewItems: IGalleryItemProps[] = [
-		{
-			title: "Single Version: Full review",
-			description:
-				"A detailed video overview of all the features of the application: from installation to advanced security features.",
-			image: "/single/1.webp",
-			tags: ["overview", "tutorial"],
-			type: "video",
-			category: "categories.desktop",
-		},
-		{
-			title: "Single Version: Container creation",
-			description:
-				"A detailed video overview of all the features of the application: from installation to advanced security features.",
-			image: "/single/2.webp",
-			tags: ["overview", "tutorial"],
-			type: "image",
-			category: "categories.features",
-		},
-		{
-			title: "Single Version: Container management",
-			description:
-				"A detailed video overview of all the features of the application: from installation to advanced security features.",
-			image: "/single/3.webp",
-			tags: ["overview", "tutorial"],
-			type: "video",
-			category: "categories.features",
-		},
-	];
 
 	return (
 		<Fragment>
@@ -59,7 +45,7 @@ export default async function PressKitPage({ params }: { params: Promise<{ local
 						</p>
 					</div>
 					<div className="mt-[40px] w-full">
-						<Gallery items={overviewItems} />
+						<Gallery items={OVERVIEW_ITEMS} />
 					</div>
 					<div className="flex items-center justify-center w-[290px] h-[45px] bg-[#DBE9FE] rounded-[10px] mt-[40px] mx-auto">
 						<p className="font-inter font-medium text-[16px] tracking-[-0.05em] text-[#3A73ED] text-center">
@@ -67,7 +53,7 @@ export default async function PressKitPage({ params }: { params: Promise<{ local
 						</p>
 					</div>
 					<div className="mt-[40px] w-full">
-						<Gallery items={overviewItems} />
+						<Gallery items={LOGOS_ITEMS} />
 					</div>
 				</section>
 			</main>

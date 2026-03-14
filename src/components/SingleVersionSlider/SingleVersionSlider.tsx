@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
@@ -15,6 +16,7 @@ const classNames = {
 };
 
 const SingleVersionSlider = () => {
+	const tAlt = useTranslations("alt");
 	const [currentSlide, setCurrentSlide] = useState(0);
 	const nodeRef = useRef(null);
 
@@ -34,7 +36,7 @@ const SingleVersionSlider = () => {
 				onClick={handlePrevSlide}>
 				<Image
 					src="/icons/arrow_right_2.svg"
-					alt="arrow_right_2"
+					alt={tAlt("arrowPrev")}
 					width={24}
 					height={24}
 					className="rotate-180 user-select-none pointer-events-none"
@@ -45,7 +47,7 @@ const SingleVersionSlider = () => {
 					<CSSTransition key={currentSlide} timeout={300} classNames={classNames} nodeRef={nodeRef}>
 						<Image
 							src={`/single/${currentSlide + 1}.webp`}
-							alt="single_version_1"
+							alt={`${tAlt("singleVersionSlide")} ${currentSlide + 1}`}
 							width={650}
 							height={433}
 							className="rounded-[15px] object-cover w-[650px] h-[433px]"
@@ -60,7 +62,7 @@ const SingleVersionSlider = () => {
 				onClick={handleNextSlide}>
 				<Image
 					src="/icons/arrow_right_2.svg"
-					alt="arrow_right_2"
+					alt={tAlt("arrowNext")}
 					width={24}
 					height={24}
 					className="user-select-none pointer-events-none"

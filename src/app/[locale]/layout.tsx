@@ -4,10 +4,12 @@ import { getTranslations } from "next-intl/server";
 import { Inter, Nunito_Sans, Roboto } from "next/font/google";
 import { notFound } from "next/navigation";
 
+import { CookieBanner } from "~/components/CookieBanner";
 import { GoogleAnalytics } from "~/components/GoogleAnalytics";
 import { Schema } from "~/components/Schema";
 import { YandexMetrika } from "~/components/YandexMetrika";
 import { routing } from "~/i18n/routing";
+import { getBaseUrl } from "~/utils/seo";
 
 import "../globals.css";
 
@@ -26,17 +28,44 @@ const roboto = Roboto({
 	subsets: ["latin"],
 });
 
+const baseUrl = getBaseUrl();
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
 	const { locale } = await params;
 	const t = await getTranslations({ locale, namespace: "metadata" });
+	const title = t("title");
+	const description = t("description");
 
 	return {
-		title: t("title"),
-		description: t("description"),
+		metadataBase: new URL(baseUrl),
+		title,
+		description,
 		icons: {
 			icon: "/favicon.png",
 		},
 		keywords: t("keywords"),
+		openGraph: {
+			type: "website",
+			locale: locale === "ru" ? "ru_RU" : "en_US",
+			url: `${baseUrl}/${locale}`,
+			title,
+			description,
+			siteName: "Trust Vault",
+			images: [
+				{
+					url: "/og.jpg",
+					width: 1200,
+					height: 630,
+					alt: "Trust Vault — Secure Data Storage and Transfer",
+				},
+			],
+		},
+		twitter: {
+			card: "summary_large_image",
+			title,
+			description,
+			images: ["/og.jpg"],
+		},
 	};
 }
 
@@ -57,14 +86,13 @@ export default async function LocaleLayout({
 			<head>
 				<GoogleAnalytics GA_MEASUREMENT_ID={process.env.GA_MEASUREMENT_ID!} />
 				<YandexMetrika YANDEX_METRIKA_ID={process.env.YANDEX_METRIKA_ID!} />
-				<link rel="canonical" href={`https://tvault.app/${locale}`} />
-				<link rel="alternate" hrefLang="en" href={`https://tvault.app/en`} />
-				<link rel="alternate" hrefLang="ru" href={`https://tvault.app/ru`} />
-				<link rel="alternate" hrefLang="x-default" href={`https://tvault.app/`} />
 				<Schema locale={locale} />
 			</head>
 			<body className={`${inter.variable} ${nunitoSans.variable} ${roboto.variable} antialiased`}>
-				<NextIntlClientProvider>{children}</NextIntlClientProvider>
+				<NextIntlClientProvider>
+					{children}
+					<CookieBanner />
+				</NextIntlClientProvider>
 			</body>
 		</html>
 	);

@@ -51,8 +51,8 @@ const WhoIs = async ({ locale }: { locale: string }) => {
 							</p>
 						</div>
 						<div className="flex flex-col gap-[20px] mt-[20px]">
-							{new Array(4).fill(0).map((_, index) => (
-								<div key={index} className="flex items-center gap-[5px]">
+							{new Array(4).fill(0).map((_, index_benefits) => (
+								<div key={index_benefits} className="flex items-center gap-[5px]">
 									<ImgIcon icon="arrow_right_2.svg" color="#2663EB" width={20} height={20} />
 									<p
 										className={cn(
@@ -61,7 +61,7 @@ const WhoIs = async ({ locale }: { locale: string }) => {
 												? "text-[15px] leading-[110%]"
 												: "text-[16px] leading-[110%]",
 										)}>
-										{t(`whoIs.items.${index + 1}.benefits.${index + 1}`)}
+										{t(`whoIs.items.${index + 1}.benefits.${index_benefits + 1}`)}
 									</p>
 								</div>
 							))}

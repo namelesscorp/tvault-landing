@@ -112,10 +112,10 @@ const SubscribeModal = ({ onClose }: { onClose: () => void }) => {
 						<label
 							htmlFor="agree"
 							className="font-inter font-medium text-[15px] tracking-[-0.05em] text-black/70">
-							{t("form.agree")}
-							{/* <Link href="/privacy-policy" className="underline">
+							{t("form.agree")}{" "}
+							<Link href="/privacy" className="underline">
 								{t("form.privacy")}
-							</Link> */}
+							</Link>
 						</label>
 					</div>
 					<ButtonBlue className="lg:h-[50px] mt-[10px] lg:mt-0 lg:text-[20px]">

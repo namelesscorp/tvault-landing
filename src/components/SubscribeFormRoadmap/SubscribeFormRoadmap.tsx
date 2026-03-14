@@ -4,6 +4,8 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useState } from "react";
 
+import { track } from "~/utils/track";
+
 import { ButtonTransparent } from "../ButtonTransparent";
 import { ImgIcon } from "../ImgIcon";
 import { Input } from "../Input";
@@ -81,22 +83,34 @@ const SubscribeFormRoadmap = () => {
 					htmlFor="agree"
 					className="font-inter font-medium text-[12px] lg:text-[15px] tracking-[-0.05em] text-black/70">
 					{t("roadmap.bottom.agree")}{" "}
-					{/* <Link href="/privacy-policy" className="font-semibold">
+					<Link href="/privacy" className="font-semibold">
 						{t("roadmap.bottom.privacy")}
-					</Link> */}
+					</Link>
 				</label>
 			</div>
 			<p className="mt-[40px] font-inter font-medium text-[20px] tracking-[-0.05em] text-black/70 text-center">
 				{t("roadmap.bottom.follow")}
 			</p>
 			<div className="flex items-center justify-center mt-[20px] gap-[20px]">
-				<Link href="https://github.com/tvault_app">
+				<Link
+					href="https://github.com/tvault_app"
+					target="_blank"
+					rel="noopener noreferrer"
+					onClick={() => track("social_click", { platform: "github", location: "roadmap" })}>
 					<ImgIcon icon="github.svg" color="#3A73ED" width={50} height={50} />
 				</Link>
-				<Link href="https://t.me/tvault_app">
+				<Link
+					href="https://t.me/tvault_app"
+					target="_blank"
+					rel="noopener noreferrer"
+					onClick={() => track("social_click", { platform: "telegram", location: "roadmap" })}>
 					<ImgIcon icon="telegram.svg" color="#3A73ED" width={50} height={50} />
 				</Link>
-				<Link href="https://x.com/tvault_app">
+				<Link
+					href="https://x.com/tvault_app"
+					target="_blank"
+					rel="noopener noreferrer"
+					onClick={() => track("social_click", { platform: "x", location: "roadmap" })}>
 					<ImgIcon icon="twitter.svg" color="#3A73ED" width={50} height={50} />
 				</Link>
 			</div>

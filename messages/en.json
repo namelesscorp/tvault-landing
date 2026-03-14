@@ -2,7 +2,42 @@
 	"metadata": {
 		"title": "Trust Vault — Secure Data Storage and Transfer",
 		"description": "Create reliable encrypted containers, distribute access with ease, and securely transfer data without risk. Open-source solution with modern encryption algorithms.",
-		"keywords": "secure storage, encrypted file sharing, AES-256, zero-knowledge, privacy, cybersecurity, data protection, information security, open source security, secure collaboration, Shamir's Secret Sharing, passwordless access, secure cloud, data encryption, end-to-end encryption"
+		"keywords": "secure storage, encrypted file sharing, AES-256, zero-knowledge, privacy, cybersecurity, data protection, information security, open source security, secure collaboration, Shamir's Secret Sharing, passwordless access, secure cloud, data encryption, end-to-end encryption",
+		"reviews": {
+			"title": "Reviews — Trust Vault",
+			"description": "Reviews and articles about Trust Vault: secure data storage and transfer from tech publications and users."
+		},
+		"pressKit": {
+			"title": "Press Kit — Trust Vault",
+			"description": "Trust Vault press kit: application screenshots, logos, and media assets for journalists and partners."
+		},
+		"faq": {
+			"title": "FAQ — Trust Vault",
+			"description": "Frequently asked questions about Trust Vault: encryption, security, installation, and usage."
+		},
+		"privacy": {
+			"title": "Privacy Policy — Trust Vault",
+			"description": "How Trust Vault collects, uses, and protects your information when you use our website and services."
+		},
+		"terms": {
+			"title": "Terms of Service — Trust Vault",
+			"description": "Terms of Service governing your access to and use of the TVault website and services."
+		}
+	},
+	"alt": {
+		"arrowPrev": "Previous",
+		"arrowNext": "Next",
+		"logo": "Trust Vault logo",
+		"namelessLogo": "Nameless",
+		"menu": "Open menu",
+		"close": "Close menu",
+		"languageExpand": "Select language",
+		"cardOpenSource": "Open source project",
+		"cardShamir": "Shamir's Secret Sharing diagram",
+		"cardAes": "AES-256 encryption icon",
+		"cardFree": "Free single version badge",
+		"plansArrow": "Next step",
+		"singleVersionSlide": "Trust Vault Single version screenshot"
 	},
 	"HomePage": {
 		"header": {
@@ -430,7 +465,7 @@
 				"subscribe": "Subscribe to Updates",
 				"sending": "Sending...",
 				"sent": "Sent!",
-				"agree": " I agree to get updates from Trust Vault",
+				"agree": "I agree to get updates from Trust Vault and accept the",
 				"privacy": "Privacy Policy",
 				"follow": "Follow us on social media"
 			}
@@ -443,24 +478,24 @@
 				"title": "General Questions about Trust Vault",
 				"items": {
 					"1": {
-						"question": "What is Trust Vault?",
-						"answer": "Trust Vault is a secure data storage and transfer solution that allows you to store and transfer data securely."
+						"question": "What is Trust Vault / TVault?",
+						"answer": "It’s a desktop app for creating encrypted vault containers."
 					},
 					"2": {
-						"question": "What is Trust Vault?",
-						"answer": "Trust Vault is a secure data storage and transfer solution that allows you to store and transfer data securely."
+						"question": "What is a \"vault\" in Trust Vault?",
+						"answer": "A vault is an encrypted folder/container: when locked it’s inaccessible, and when unlocked it behaves like a normal folder."
 					},
 					"3": {
-						"question": "What is Trust Vault?",
-						"answer": "Trust Vault is a secure data storage and transfer solution that allows you to store and transfer data securely."
+						"question": "Which operating systems does the Personal version support?",
+						"answer": "The Personal version is available for Windows (32/64‑bit), macOS (Intel/Apple Silicon) and Linux (AppImage)."
 					},
 					"4": {
-						"question": "What is Trust Vault?",
-						"answer": "Trust Vault is a secure data storage and transfer solution that allows you to store and transfer data securely."
+						"question": "Do I need an account, subscription, or constant internet for Personal version?",
+						"answer": "The Personal version does not require mandatory registration/servers/internet for local use."
 					},
 					"5": {
-						"question": "What is Trust Vault?",
-						"answer": "Trust Vault is a secure data storage and transfer solution that allows you to store and transfer data securely."
+						"question": "What encryption algorithm is used in Trust Vault?",
+						"answer": "AES‑256 encryption is used in Trust Vault."
 					}
 				}
 			}
@@ -477,20 +512,61 @@
 			"subscribe": "Subscribe to Updates",
 			"sending": "Sending...",
 			"sent": "Sent!",
-			"agree": "I agree to get updates from Trust Vault",
+			"agree": "I agree to get updates from Trust Vault and accept the",
 			"privacy": "Privacy Policy"
 		}
 	},
 	"Gallery": {
+		"download": "Download image",
+		"openInNewTab": "Open in new tab",
 		"categories": {
 			"all": "All",
 			"desktop": "Desktop",
 			"features": "Features",
-			"reviews": "Reviews"
+			"reviews": "Reviews",
+			"logos": "Logos"
 		},
 		"tags": {
 			"overview": "Overview",
-			"tutorial": "Tutorial"
+			"tutorial": "Tutorial",
+			"logos": "Logos",
+			"nameless": "Nameless",
+			"tvault": "Trust Vault",
+			"review": "Review"
+		},
+		"items": {
+			"titles": {
+				"reviewAllYourTech": "AllYourTech",
+				"reviewProductCool": "ProductCool",
+				"reviewScoutForge": "Scout Forge",
+				"reviewStartUpRanking": "StartUp Ranking",
+				"1": "Personal Version: Container creation",
+				"2": "Personal Version: Container",
+				"3": "Personal Version: Settings",
+				"4": "Logo Trust Vault black",
+				"5": "Logo Trust Vault blue",
+				"6": "Nameless logo",
+				"7": "Nameless logo transparent",
+				"8": "Nameless logo",
+				"9": "Personal Version: Opening container",
+				"10": "Personal Version: Container opened"
+			},
+			"descriptions": {
+				"reviewAllYourTech": "Trust Vault offers secure data storage and transfer with encrypted containers, multi-access control, and open-source transparency. Encrypted containers, Shamir's Secret Sharing, AES-256, standalone operation without sign-ups or servers.",
+				"reviewProductCool": "Open-source solution for creating encrypted containers and securely transferring sensitive data. Military-grade encryption with flexible access management. AES-256-GCM, PBKDF2, Shamir's Secret Sharing — from personal use to enterprise roadmap.",
+				"reviewScoutForge": "Trust Vault on Scout Forge — a platform for unbiased reviews of newly launched applications. Explore overview, design, security, and alternatives.",
+				"reviewStartUpRanking": "Trust Vault on StartUp Ranking — startup profile with rankings, metrics, and discovery for innovative products.",
+				"1": "Create a new encrypted vault for secure file storage. The container is initialized with cryptographic parameters and configured for access using share tokens or a master token.",
+				"2": "Encrypted storage for your files and folders. Access is granted only when the required number of key shares is provided, ensuring a high level of security and access control.",
+				"3": "Settings — a section for configuring the main application parameters, including the container storage path, interface language, and update management",
+				"4": "Logo Trust Vault black",
+				"5": "Logo Trust Vault blue",
+				"6": "Nameless logo",
+				"7": "Nameless logo transparent",
+				"8": "Nameless logo",
+				"9": "Open the encrypted container and gain access to the files inside. To unlock it, access confirmation is required using share tokens or master token.",
+				"10": "View information about the opened container, edit its metadata (Name, Comment, Tags), and manage the container using the \"Open folder\", \"Save\", and \"Close\" actions."
+			}
 		}
 	},
 	"PressKit": {
@@ -501,5 +577,14 @@
 	"Reviews": {
 		"title": "Reviews",
 		"articles": "Articles"
+	},
+	"CookieBanner": {
+		"title": "Cookies & Analytics",
+		"text": {
+			"line1": "We use cookies and analytics tools (Google Analytics and Yandex Metrica) to understand how visitors use our website and to improve our services.",
+			"line2": "By continuing to use this website, you agree to the use of cookies and analytics as described in our Privacy Policy.",
+			"line3": "If you do not agree with this, please stop using the website."
+		},
+		"close": "Close"
 	}
 }

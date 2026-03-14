@@ -69,7 +69,7 @@ const Download = async ({ locale, userAgent }: { locale: string; userAgent: stri
 						{t("download.windows.title")}
 					</p>
 					<p className="font-inter font-regular text-[16px] tracking-[-0.05em] text-black/70 text-center">
-						{version}
+						v{version}
 					</p>
 					<Link href={platformLinks[0]} target="_blank" className="w-[230px]">
 						<ButtonBlue className="w-full">{t("download.windows.download")}</ButtonBlue>
@@ -83,7 +83,7 @@ const Download = async ({ locale, userAgent }: { locale: string; userAgent: stri
 						{t("download.macos.title")}
 					</p>
 					<p className="font-inter font-regular text-[16px] tracking-[-0.05em] text-black/70 text-center">
-						{version}
+						v{version}
 					</p>
 					<div className="w-[230px]">
 						<MacDownloadButtonClient
@@ -101,7 +101,7 @@ const Download = async ({ locale, userAgent }: { locale: string; userAgent: stri
 						{t("download.linux.title")}
 					</p>
 					<p className="font-inter font-regular text-[16px] tracking-[-0.05em] text-black/70 text-center">
-						{version}
+						v{version}
 					</p>
 					<Link href={platformLinks[2]} target="_blank" className="w-[230px]">
 						<ButtonBlue className="w-full">{t("download.linux.download")}</ButtonBlue>
@@ -188,7 +188,9 @@ const Download = async ({ locale, userAgent }: { locale: string; userAgent: stri
 					{t("download.openSource")}
 				</p>
 				<Link href="https://github.com/namelesscorp/tvault" target="_blank">
-					<ButtonTransparent>{t("download.viewOnGitHub")}</ButtonTransparent>
+					<ButtonTransparent eventName="download_view_on_github">
+						{t("download.viewOnGitHub")}
+					</ButtonTransparent>
 				</Link>
 			</div>
 		</section>

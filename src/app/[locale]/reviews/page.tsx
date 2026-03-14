@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Fragment } from "react";
 
@@ -6,6 +7,21 @@ import { IGalleryItemProps } from "~/components/GalleryItem/GalleryItem.model";
 import { LayoutFooter } from "~/components/LayoutFooter";
 import { LayoutHeader } from "~/components/LayoutHeader";
 import { cn } from "~/utils/css";
+import { buildAlternates, getBaseUrl } from "~/utils/seo";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+	const { locale } = await params;
+	const t = await getTranslations({ locale, namespace: "metadata.reviews" });
+	const path = "/reviews";
+	const canonicalUrl = `${getBaseUrl()}/${locale}${path}`;
+	return {
+		title: t("title"),
+		description: t("description"),
+		alternates: buildAlternates(locale, path),
+		openGraph: { url: canonicalUrl },
+		twitter: { card: "summary_large_image" },
+	};
+}
 
 export default async function ReviewsPage({ params }: { params: Promise<{ locale: string }> }) {
 	const { locale } = await params;
@@ -13,31 +29,44 @@ export default async function ReviewsPage({ params }: { params: Promise<{ locale
 
 	const overviewItems: IGalleryItemProps[] = [
 		{
-			title: "Review 1",
-			description:
-				"A detailed video overview of all the features of the application: from installation to advanced security features.",
-			image: "/single/1.webp",
-			tags: ["overview", "tutorial"],
+			title: "items.titles.reviewAllYourTech",
+			description: "items.descriptions.reviewAllYourTech",
+			image: "/gallery/logos/reviews/allyourtech.webp",
+			tags: ["review"],
 			type: "link",
+			link: "https://allyourtech.ai/ai-tools/trust-vault",
 			category: "categories.reviews",
+			date: "2025-09-16",
 		},
 		{
-			title: "Review 2",
-			description:
-				"A detailed video overview of all the features of the application: from installation to advanced security features.",
-			image: "/single/2.webp",
-			tags: ["overview", "tutorial"],
+			title: "items.titles.reviewProductCool",
+			description: "items.descriptions.reviewProductCool",
+			image: "/gallery/logos/reviews/productcool.svg",
+			tags: ["review"],
 			type: "link",
+			link: "https://www.productcool.com/product/trust-vault",
 			category: "categories.reviews",
+			date: "2025-09-17",
 		},
 		{
-			title: "Review 3",
-			description:
-				"A detailed video overview of all the features of the application: from installation to advanced security features.",
-			image: "/single/2.webp",
-			tags: ["overview", "tutorial"],
+			title: "items.titles.reviewScoutForge",
+			description: "items.descriptions.reviewScoutForge",
+			image: "/gallery/logos/reviews/scoutforge.webp",
+			tags: ["review"],
 			type: "link",
+			link: "https://scoutforge.net/apps/trust-vault",
 			category: "categories.reviews",
+			date: "2025-10-14",
+		},
+		{
+			title: "items.titles.reviewStartUpRanking",
+			description: "items.descriptions.reviewStartUpRanking",
+			image: "/gallery/logos/reviews/startupranking.webp",
+			tags: ["review"],
+			type: "link",
+			link: "https://www.startupranking.com/startup/trust-vault",
+			category: "categories.reviews",
+			date: "2025-10-06",
 		},
 	];
 

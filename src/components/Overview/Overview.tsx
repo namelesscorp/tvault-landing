@@ -4,39 +4,10 @@ import { cn } from "~/utils/css";
 
 import { Gallery } from "../Gallery";
 import { IGalleryItemProps } from "../GalleryItem/GalleryItem.model";
+import { OVERVIEW_ITEMS } from "./Overview.model";
 
 const Overview = async ({ locale }: { locale: string }) => {
 	const t = await getTranslations({ locale, namespace: "HomePage" });
-
-	const overviewItems: IGalleryItemProps[] = [
-		{
-			title: "Single Version: Full review",
-			description:
-				"A detailed video overview of all the features of the application: from installation to advanced security features.",
-			image: "/single/1.webp",
-			tags: ["overview", "tutorial"],
-			type: "video",
-			category: "categories.desktop",
-		},
-		{
-			title: "Single Version: Container creation",
-			description:
-				"A detailed video overview of all the features of the application: from installation to advanced security features.",
-			image: "/single/2.webp",
-			tags: ["overview", "tutorial"],
-			type: "image",
-			category: "categories.features",
-		},
-		{
-			title: "Single Version: Container management",
-			description:
-				"A detailed video overview of all the features of the application: from installation to advanced security features.",
-			image: "/single/3.webp",
-			tags: ["overview", "tutorial"],
-			type: "video",
-			category: "categories.features",
-		},
-	];
 
 	return (
 		<section
@@ -62,7 +33,7 @@ const Overview = async ({ locale }: { locale: string }) => {
 				{t("overview.text")}
 			</p>
 			<div className="mt-[40px] w-full">
-				<Gallery items={overviewItems} />
+				<Gallery items={OVERVIEW_ITEMS} />
 			</div>
 		</section>
 	);

@@ -3,6 +3,7 @@
 import { MouseEvent } from "react";
 
 import { cn } from "~/utils/css";
+import { track } from "~/utils/track";
 
 interface MacDownloadButtonClientProps {
 	macArm: string;
@@ -38,7 +39,7 @@ const MacDownloadButtonClient = ({ macArm, macIntel, title, className }: MacDown
 			// ignore GPU detection errors, fallback to default href
 		}
 
-		window.gtag?.("event", "download");
+		track("download");
 		window.open(href, "_blank", "noopener,noreferrer");
 	};
 

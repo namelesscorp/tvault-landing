@@ -57,7 +57,7 @@ const Hero = async ({ locale }: { locale: string }) => {
 					locale === "ru" ? "grid-cols-1 lg:grid-cols-[250px_auto]" : "grid-cols-[250px_auto]",
 				)}>
 				<Link href="#download" className={cn(locale === "ru" && "w-full lg:w-auto")}>
-					<ButtonBlue>
+					<ButtonBlue eventName="hero_download">
 						<div className="flex items-center justify-center gap-[10px]">
 							<ImgIcon icon={"circle_down.svg"} color="#FFFFFF" width={20} height={20} />
 							{t("hero.download")}
@@ -65,7 +65,7 @@ const Hero = async ({ locale }: { locale: string }) => {
 					</ButtonBlue>
 				</Link>
 				<Link href="#capabilities">
-					<ButtonTransparent className={cn(locale === "ru" && "w-full lg:w-auto")}>
+					<ButtonTransparent className={cn(locale === "ru" && "w-full lg:w-auto")} eventName="learn_more">
 						{t("hero.learnMore")}
 					</ButtonTransparent>
 				</Link>
