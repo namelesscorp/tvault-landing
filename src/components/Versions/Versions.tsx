@@ -5,6 +5,7 @@ import { cn } from "~/utils/css";
 import { ButtonBlue } from "../ButtonBlue";
 import { ImgIcon } from "../ImgIcon";
 import { SubscribeModalWrapper } from "../SubscribeModalWrapper";
+import Link from "next/link";
 
 const Versions = async ({ locale }: { locale: string }) => {
 	const t = await getTranslations({ locale, namespace: "HomePage" });
@@ -58,9 +59,11 @@ const Versions = async ({ locale }: { locale: string }) => {
 							</div>
 						))}
 					</div>
-					<ButtonBlue className="w-[230px]" eventName="versions_personal_download">
-						{t("versions.downloadNow")}
-					</ButtonBlue>
+					<Link href={"#download"}>
+						<ButtonBlue className="w-[230px]" eventName="versions_personal_download">
+							{t("versions.downloadNow")}
+						</ButtonBlue>
+					</Link>
 				</div>
 				<div className="flex flex-col items-center gap-[20px] p-[30px] bg-white/80 border-2 border-[#E6E7EB] rounded-[10px] transition-all duration-300 lg:hover:shadow-[0px_5px_5px_2px_rgba(0,0,0,0.1)] lg:hover:border-[#BCDBFE]">
 					<div className="flex items-center justify-center w-[80px] h-[80px] bg-[#DBE9FE] rounded-full">

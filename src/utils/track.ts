@@ -1,5 +1,5 @@
-/** Yandex Metrika counter ID (NEXT_PUBLIC_YANDEX_METRIKA_ID in .env) */
-const YM_COUNTER_ID = typeof process !== "undefined" ? Number(process.env.NEXT_PUBLIC_YANDEX_METRIKA_ID) : NaN;
+/** Yandex Metrika counter ID (YANDEX_METRIKA_ID in .env) */
+const YM_COUNTER_ID = typeof process !== "undefined" ? Number(process.env.YANDEX_METRIKA_ID) : NaN;
 
 /**
  * Sends event to Google Analytics and Yandex Metrika.
