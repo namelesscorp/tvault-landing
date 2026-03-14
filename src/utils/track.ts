@@ -1,6 +1,3 @@
-/** Yandex Metrika counter ID (YANDEX_METRIKA_ID in .env) */
-const YM_COUNTER_ID = typeof process !== "undefined" ? Number(process.env.YANDEX_METRIKA_ID) : NaN;
-
 /**
  * Sends event to Google Analytics and Yandex Metrika.
  * @param eventName — event name (GA: event name, YM: reachGoal)
@@ -11,7 +8,7 @@ export function track(eventName: string, params?: Record<string, string>): void 
 
 	const ymGoal =
 		params?.platform && params?.location ? `${eventName}_${params.platform}_${params.location}` : eventName;
-	if (!Number.isNaN(YM_COUNTER_ID)) {
-		window.ym?.(YM_COUNTER_ID, "reachGoal", ymGoal);
+	if (process.env.YANDEX_METRIKA_ID) {
+		window.ym?.(Number(process.env.YANDEX_METRIKA_ID), "reachGoal", ymGoal);
 	}
 }

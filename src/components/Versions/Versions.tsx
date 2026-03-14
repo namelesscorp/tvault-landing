@@ -1,11 +1,11 @@
 import { getTranslations } from "next-intl/server";
+import Link from "next/link";
 
 import { cn } from "~/utils/css";
 
 import { ButtonBlue } from "../ButtonBlue";
 import { ImgIcon } from "../ImgIcon";
 import { SubscribeModalWrapper } from "../SubscribeModalWrapper";
-import Link from "next/link";
 
 const Versions = async ({ locale }: { locale: string }) => {
 	const t = await getTranslations({ locale, namespace: "HomePage" });

@@ -26,8 +26,8 @@ const ButtonBlue = ({
 				"flex items-center justify-center px-[15px] h-[40px] bg-[#3A73ED] rounded-[10px] hover:bg-[#3A73ED]/90 transition-all duration-300 border-none cursor-pointer",
 				className,
 			)}
-			onClick={handleClick}
-			{...props}>
+			{...props}
+			onClick={handleClick}>
 			<p className="font-inter font-medium text-[16px] tracking-[-0.05em] text-[#FFFFFF] leading-[100%] whitespace-nowrap">
 				{children}
 			</p>
