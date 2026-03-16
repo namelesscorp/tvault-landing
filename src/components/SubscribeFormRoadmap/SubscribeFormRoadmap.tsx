@@ -93,7 +93,7 @@ const SubscribeFormRoadmap = () => {
 			</p>
 			<div className="flex items-center justify-center mt-[20px] gap-[20px]">
 				<Link
-					href="https://github.com/tvault_app"
+					href="https://github.com/namelesscorp"
 					target="_blank"
 					rel="noopener noreferrer"
 					onClick={() => track("social_click", { platform: "github", location: "roadmap" })}>
