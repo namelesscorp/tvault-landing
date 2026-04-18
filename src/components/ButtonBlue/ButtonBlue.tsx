@@ -28,9 +28,9 @@ const ButtonBlue = ({
 			)}
 			{...props}
 			onClick={handleClick}>
-			<p className="font-inter font-medium text-[16px] tracking-[-0.05em] text-[#FFFFFF] leading-[100%] whitespace-nowrap">
+			<div className="font-inter font-medium text-[16px] tracking-[-0.05em] text-white leading-[100%] whitespace-nowrap">
 				{children}
-			</p>
+			</div>
 		</button>
 	);
 };
