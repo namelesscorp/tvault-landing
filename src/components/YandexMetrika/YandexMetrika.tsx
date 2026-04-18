@@ -3,7 +3,7 @@ import Script from "next/script";
 const YandexMetrika = ({ YANDEX_METRIKA_ID }: { YANDEX_METRIKA_ID: string }) => {
 	return (
 		<Script
-			strategy="afterInteractive"
+			strategy="lazyOnload"
 			id="yandex-metrika"
 			dangerouslySetInnerHTML={{
 				__html: `
