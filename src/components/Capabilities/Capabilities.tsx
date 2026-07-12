@@ -29,18 +29,19 @@ const Capabilities = async ({ locale }: { locale: string }) => {
 				{new Array(6).fill(0).map((_, index) => (
 					<div
 						key={index}
-						className="flex flex-col gap-[20px] py-[35px] px-[26px] bg-white/80 border-2 border-[#E6E7EB] rounded-[10px] transition-all duration-300 lg:hover:shadow-[0px_5px_5px_2px_rgba(0,0,0,0.1)] lg:hover:border-[#BCDBFE]">
-						<div className="flex items-center justify-center w-[50px] h-[50px] bg-[#DBE9FE] rounded-[10px]">
+						className="reveal-on-scroll group flex flex-col gap-[20px] py-[35px] px-[26px] bg-white/80 border-2 border-[#E6E7EB] rounded-[10px] transition-all duration-300 lg:hover:-translate-y-[4px] lg:hover:shadow-[0_14px_30px_-12px_rgba(58,115,237,0.35)] lg:hover:border-[#BCDBFE]">
+						<div className="flex items-center justify-center w-[50px] h-[50px] bg-[#DBE9FE] rounded-[10px] transition-colors duration-300 group-hover:bg-[#3A73ED]">
 							<ImgIcon
 								icon={t(`capabilities.items.${index + 1}.icon`)}
 								color="#3A73ED"
 								width={30}
 								height={30}
+								className="transition-colors duration-300 group-hover:bg-white!"
 							/>
 						</div>
-						<p className="font-inter font-semibold text-[24px] tracking-[-0.05em] text-black/80">
+						<h3 className="font-inter font-semibold text-[24px] tracking-[-0.05em] text-black/80">
 							{t(`capabilities.items.${index + 1}.title`)}
-						</p>
+						</h3>
 						<p
 							className={cn(
 								"font-inter font-medium tracking-[-0.05em] text-black/70 lg:text-[16px] leading-[110%]",
@@ -51,7 +52,7 @@ const Capabilities = async ({ locale }: { locale: string }) => {
 					</div>
 				))}
 			</div>
-			<div className="mt-[40px] w-full max-w-[1236px] px-[25px] py-[16px] bg-[#3A73ED] lg:rounded-[10px] lg:py-[30px]">
+			<div className="reveal-on-scroll relative isolate overflow-hidden mt-[40px] w-full max-w-[1236px] px-[25px] py-[16px] bg-[linear-gradient(115deg,_#2E5FD4_0%,_#3A73ED_45%,_#5A8CF2_100%)] shadow-[0_20px_50px_-24px_rgba(58,115,237,0.75)] lg:rounded-[10px] lg:py-[30px] before:content-[''] before:absolute before:inset-0 before:-z-10 before:opacity-[0.15] before:[background-image:radial-gradient(circle_at_1px_1px,#FFF_1px,transparent_0)] before:[background-size:22px_22px]">
 				<p className="font-inter font-bold text-[24px] lg:text-[32px] tracking-[-0.05em] text-white text-center">
 					{t("capabilities.bottom.title")}
 				</p>

@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
-import { getTranslations } from "next-intl/server";
-import { Inter, Nunito_Sans, Roboto } from "next/font/google";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 
 import { CookieBanner } from "~/components/CookieBanner";
@@ -15,20 +15,15 @@ import "../globals.css";
 
 const inter = Inter({
 	variable: "--font-inter",
-	subsets: ["latin"],
-});
-
-const nunitoSans = Nunito_Sans({
-	variable: "--font-nunito-sans",
-	subsets: ["latin"],
-});
-
-const roboto = Roboto({
-	variable: "--font-roboto",
-	subsets: ["latin"],
+	subsets: ["latin", "cyrillic"],
+	display: "swap",
 });
 
 const baseUrl = getBaseUrl();
+
+export function generateStaticParams() {
+	return routing.locales.map(locale => ({ locale }));
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
 	const { locale } = await params;
@@ -40,13 +35,31 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 		metadataBase: new URL(baseUrl),
 		title,
 		description,
+		applicationName: "Trust Vault",
+		authors: [{ name: "Nameless", url: "https://github.com/namelesscorp" }],
+		creator: "Nameless",
+		publisher: "Nameless",
 		icons: {
 			icon: "/favicon.png",
+			shortcut: "/favicon.ico",
+			apple: "/favicon.png",
 		},
 		keywords: t("keywords"),
+		robots: {
+			index: true,
+			follow: true,
+			googleBot: {
+				index: true,
+				follow: true,
+				"max-image-preview": "large",
+				"max-snippet": -1,
+				"max-video-preview": -1,
+			},
+		},
 		openGraph: {
 			type: "website",
 			locale: locale === "ru" ? "ru_RU" : "en_US",
+			alternateLocale: locale === "ru" ? "en_US" : "ru_RU",
 			url: `${baseUrl}/${locale}`,
 			title,
 			description,
@@ -62,12 +75,19 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 		},
 		twitter: {
 			card: "summary_large_image",
+			site: "@tvault_app",
+			creator: "@tvault_app",
 			title,
 			description,
 			images: ["/og.jpg"],
 		},
 	};
 }
+
+export const viewport: Viewport = {
+	themeColor: "#3A73ED",
+	colorScheme: "light",
+};
 
 export default async function LocaleLayout({
 	children,
@@ -81,6 +101,8 @@ export default async function LocaleLayout({
 		notFound();
 	}
 
+	setRequestLocale(locale);
+
 	return (
 		<html lang={locale}>
 			<head>
@@ -88,7 +110,7 @@ export default async function LocaleLayout({
 				<YandexMetrika YANDEX_METRIKA_ID={process.env.YANDEX_METRIKA_ID!} />
 				<Schema locale={locale} />
 			</head>
-			<body className={`${inter.variable} ${nunitoSans.variable} ${roboto.variable} antialiased`}>
+			<body className={`${inter.variable} antialiased`}>
 				<NextIntlClientProvider>
 					{children}
 					<CookieBanner />

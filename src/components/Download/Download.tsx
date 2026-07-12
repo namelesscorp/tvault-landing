@@ -2,40 +2,28 @@ import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 
 import { cn } from "~/utils/css";
-import { extractDownloadLinks } from "~/utils/downloads";
-import { getAppVersion } from "~/utils/version";
+import { getAppVersion, getDownloadLinks } from "~/utils/release";
 
 import { ButtonBlue } from "../ButtonBlue";
 import { ButtonTransparent } from "../ButtonTransparent";
 import { DownloadLinkClient } from "../DownloadLinkClient";
 import { ImgIcon } from "../ImgIcon";
 import { MacDownloadButtonClient } from "../MacDownloadButtonClient";
+import { WindowsDownloadButtonClient } from "../WindowsDownloadButtonClient";
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 const fallback = "https://github.com/namelesscorp/tvault/releases";
 
-const Download = async ({ locale, userAgent }: { locale: string; userAgent: string }) => {
+const Download = async ({ locale }: { locale: string }) => {
 	const t = await getTranslations({ locale, namespace: "HomePage" });
 
 	const version = await getAppVersion();
-
-	const release = await fetch(`${BASE_URL}/api/release`)
-		.then(res => res.json())
-		.then(data => extractDownloadLinks(data));
+	const release = await getDownloadLinks();
 
 	const windows64 = release.windows64 || fallback;
 	const windows32 = release.windows32 || fallback;
 	const macArm = release.macArm || fallback;
 	const macIntel = release.macIntel || fallback;
 	const linux = release.linux || fallback;
-
-	const is64BitWindows = userAgent.includes("WOW64") || userAgent.includes("Win64") || userAgent.includes("x64");
-	const windowsLink = !is64BitWindows ? windows32 : windows64;
-
-	const isAppleSilicon = /Apple\\s*M\\d/i.test(userAgent) || userAgent.includes("arm64");
-	const macLink = isAppleSilicon ? macArm : macIntel;
-
-	const platformLinks = [windowsLink, macLink, linux];
 
 	return (
 		<section
@@ -65,23 +53,27 @@ const Download = async ({ locale, userAgent }: { locale: string; userAgent: stri
 					<div className="flex items-center justify-center w-[80px] h-[80px] bg-[#DBE9FE] rounded-full">
 						<ImgIcon icon="windows.svg" color="#3A73ED" width={50} height={50} />
 					</div>
-					<p className="font-inter font-bold text-[28px] tracking-[-0.05em] text-black/80 text-center">
+					<h3 className="font-inter font-bold text-[28px] tracking-[-0.05em] text-black/80 text-center">
 						{t("download.windows.title")}
-					</p>
+					</h3>
 					<p className="font-inter font-regular text-[16px] tracking-[-0.05em] text-black/70 text-center">
 						v{version}
 					</p>
-					<Link href={platformLinks[0]} target="_blank" className="w-[230px]">
-						<ButtonBlue className="w-full">{t("download.windows.download")}</ButtonBlue>
-					</Link>
+					<div className="w-[230px]">
+						<WindowsDownloadButtonClient
+							windows64={windows64}
+							windows32={windows32}
+							title={t("download.windows.download")}
+						/>
+					</div>
 				</div>
 				<div className="flex flex-col items-center gap-[20px] p-[30px] bg-white/80 border-2 border-[#E6E7EB] rounded-[10px] transition-all duration-300 lg:hover:shadow-[0px_5px_5px_2px_rgba(0,0,0,0.1)] lg:hover:border-[#BCDBFE]">
 					<div className="flex items-center justify-center w-[80px] h-[80px] bg-[#DBE9FE] rounded-full">
 						<ImgIcon icon="apple.svg" color="#3A73ED" width={50} height={50} />
 					</div>
-					<p className="font-inter font-bold text-[28px] tracking-[-0.05em] text-black/80 text-center">
+					<h3 className="font-inter font-bold text-[28px] tracking-[-0.05em] text-black/80 text-center">
 						{t("download.macos.title")}
-					</p>
+					</h3>
 					<p className="font-inter font-regular text-[16px] tracking-[-0.05em] text-black/70 text-center">
 						v{version}
 					</p>
@@ -97,13 +89,13 @@ const Download = async ({ locale, userAgent }: { locale: string; userAgent: stri
 					<div className="flex items-center justify-center w-[80px] h-[80px] bg-[#DBE9FE] rounded-full">
 						<ImgIcon icon="linux.svg" color="#3A73ED" width={50} height={50} />
 					</div>
-					<p className="font-inter font-bold text-[28px] tracking-[-0.05em] text-black/80 text-center">
+					<h3 className="font-inter font-bold text-[28px] tracking-[-0.05em] text-black/80 text-center">
 						{t("download.linux.title")}
-					</p>
+					</h3>
 					<p className="font-inter font-regular text-[16px] tracking-[-0.05em] text-black/70 text-center">
 						v{version}
 					</p>
-					<Link href={platformLinks[2]} target="_blank" className="w-[230px]">
+					<Link href={linux} target="_blank" className="w-[230px]">
 						<ButtonBlue className="w-full">{t("download.linux.download")}</ButtonBlue>
 					</Link>
 				</div>

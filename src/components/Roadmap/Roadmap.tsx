@@ -114,9 +114,9 @@ const Roadmap = async ({ locale }: { locale: string }) => {
 									)}
 								</div>
 								<div>
-									<p className="font-inter font-bold text-[28px] tracking-[-0.05em] text-black/80">
+									<h3 className="font-inter font-bold text-[28px] tracking-[-0.05em] text-black/80">
 										{t(`roadmap.items.${index + 1}.title`)}
-									</p>
+									</h3>
 									<p className="font-inter font-medium text-[12px] lg:text-[16px] tracking-[-0.05em] text-black/70 mt-[3px]">
 										{t(`roadmap.items.${index + 1}.text`)}
 									</p>

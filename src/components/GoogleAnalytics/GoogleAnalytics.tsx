@@ -6,10 +6,7 @@ import { Fragment } from "react";
 const GoogleAnalytics = ({ GA_MEASUREMENT_ID }: { GA_MEASUREMENT_ID: string }) => {
 	return (
 		<Fragment>
-			<Script
-				strategy="lazyOnload"
-				src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-			/>
+			<Script strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
 			<Script
 				id="google-analytics"
 				strategy="lazyOnload"

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Fragment } from "react";
 
+import { BreadcrumbSchema } from "~/components/BreadcrumbSchema";
 import { ImgIcon } from "~/components/ImgIcon";
 import { LayoutFooter } from "~/components/LayoutFooter";
 import { LayoutHeader } from "~/components/LayoutHeader";
@@ -27,6 +28,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function FaqPage({ params }: { params: Promise<{ locale: string }> }) {
 	const { locale } = await params;
+	setRequestLocale(locale);
+	const tMeta = await getTranslations({ locale, namespace: "metadata.faq" });
 	const t = await getTranslations({ locale, namespace: "FAQ" });
 
 	const faqEntities = new Array(sectionsCount).fill(0).flatMap((_, sectionIndex) =>
@@ -48,7 +51,8 @@ export default async function FaqPage({ params }: { params: Promise<{ locale: st
 
 	return (
 		<Fragment>
-			<script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+			<BreadcrumbSchema locale={locale} name={tMeta("title")} path="/faq" />
+			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 			<LayoutHeader />
 			<main>
 				<section className="pt-[50px] px-[25px] py-[40px] lg:px-[40px] lg:py-[50px]">

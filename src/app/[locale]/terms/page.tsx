@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Link from "next/link";
 import { Fragment } from "react";
 
+import { BreadcrumbSchema } from "~/components/BreadcrumbSchema";
 import { LayoutFooter } from "~/components/LayoutFooter";
 import { LayoutHeader } from "~/components/LayoutHeader";
 import { cn } from "~/utils/css";
@@ -276,10 +277,13 @@ function TermsContentRu() {
 
 export default async function TermsPage({ params }: { params: Promise<{ locale: string }> }) {
 	const { locale } = await params;
+	setRequestLocale(locale);
+	const tMeta = await getTranslations({ locale, namespace: "metadata.terms" });
 	const isEn = locale === "en";
 
 	return (
 		<Fragment>
+			<BreadcrumbSchema locale={locale} name={tMeta("title")} path="/terms" />
 			<LayoutHeader />
 			<main>
 				<section className="pt-[50px] px-[25px] py-[40px] lg:px-[40px] lg:py-[50px]">

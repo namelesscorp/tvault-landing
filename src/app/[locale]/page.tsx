@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { headers } from "next/headers";
+import { setRequestLocale } from "next-intl/server";
 import { Fragment } from "react";
 
 import { Capabilities } from "~/components/Capabilities";
@@ -26,8 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
 	const { locale } = await params;
-	const headersList = await headers();
-	const userAgent = headersList.get("user-agent") || "";
+	setRequestLocale(locale);
 
 	return (
 		<Fragment>
@@ -38,7 +37,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 				<Overview locale={locale} />
 				<WhoIs locale={locale} />
 				<Versions locale={locale} />
-				<Download locale={locale} userAgent={userAgent} />
+				<Download locale={locale} />
 				<Roadmap locale={locale} />
 			</main>
 			<LayoutFooter />

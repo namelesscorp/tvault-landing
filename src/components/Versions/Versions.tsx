@@ -38,9 +38,9 @@ const Versions = async ({ locale }: { locale: string }) => {
 					<div className="flex items-center justify-center w-[80px] h-[80px] bg-[#DBE9FE] rounded-full">
 						<ImgIcon icon="monitor.svg" color="#3A73ED" width={50} height={50} />
 					</div>
-					<p className="font-inter font-bold text-[28px] tracking-[-0.05em] text-black/80 lg:text-[24px] leading-[110%]">
+					<h3 className="font-inter font-bold text-[28px] tracking-[-0.05em] text-black/80 lg:text-[24px] leading-[110%]">
 						{t("versions.personal.title")}
-					</p>
+					</h3>
 					<div className="flex items-center justify-center w-[160px] h-[30px] bg-[#DCFCE8] rounded-[10px]">
 						<p className="font-inter font-medium text-[16px] tracking-[-0.05em] text-[#156634] text-center">
 							{t("versions.available")}
@@ -69,9 +69,9 @@ const Versions = async ({ locale }: { locale: string }) => {
 					<div className="flex items-center justify-center w-[80px] h-[80px] bg-[#DBE9FE] rounded-full">
 						<ImgIcon icon="building.svg" color="#3A73ED" width={50} height={50} />
 					</div>
-					<p className="font-inter font-bold text-[28px] tracking-[-0.05em] text-black/80 lg:text-[24px] leading-[110%]">
+					<h3 className="font-inter font-bold text-[28px] tracking-[-0.05em] text-black/80 lg:text-[24px] leading-[110%]">
 						{t("versions.enterprise.title")}
-					</p>
+					</h3>
 					<div className="flex items-center justify-center w-[160px] h-[30px] bg-[#DBE9FE] rounded-[10px]">
 						<p className="font-inter font-medium text-[16px] tracking-[-0.05em] text-[#3A73ED] text-center">
 							{t("versions.comingSoon")}
@@ -100,9 +100,9 @@ const Versions = async ({ locale }: { locale: string }) => {
 					<div className="flex items-center justify-center w-[80px] h-[80px] bg-[#DBE9FE] rounded-full">
 						<ImgIcon icon="cloud.svg" color="#3A73ED" width={50} height={50} />
 					</div>
-					<p className="font-inter font-bold text-[28px] tracking-[-0.05em] text-black/80 lg:text-[24px] leading-[110%]">
+					<h3 className="font-inter font-bold text-[28px] tracking-[-0.05em] text-black/80 lg:text-[24px] leading-[110%]">
 						{t("versions.cloud.title")}
-					</p>
+					</h3>
 					<div className="flex items-center justify-center w-[160px] h-[30px] bg-[#DBE9FE] rounded-[10px]">
 						<p className="font-inter font-medium text-[16px] tracking-[-0.05em] text-[#3A73ED] text-center">
 							{t("versions.comingSoon")}

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Fragment } from "react";
 
+import { BreadcrumbSchema } from "~/components/BreadcrumbSchema";
 import { Gallery } from "~/components/Gallery";
 import { IGalleryItemProps } from "~/components/GalleryItem/GalleryItem.model";
 import { LayoutFooter } from "~/components/LayoutFooter";
@@ -25,6 +26,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function ReviewsPage({ params }: { params: Promise<{ locale: string }> }) {
 	const { locale } = await params;
+	setRequestLocale(locale);
+	const tMeta = await getTranslations({ locale, namespace: "metadata.reviews" });
 	const t = await getTranslations({ locale, namespace: "Reviews" });
 
 	const overviewItems: IGalleryItemProps[] = [
@@ -72,6 +75,7 @@ export default async function ReviewsPage({ params }: { params: Promise<{ locale
 
 	return (
 		<Fragment>
+			<BreadcrumbSchema locale={locale} name={tMeta("title")} path="/reviews" />
 			<LayoutHeader />
 			<main>
 				<section className="pt-[50px] px-[25px] py-[40px] lg:px-[40px] lg:py-[50px]">

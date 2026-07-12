@@ -16,7 +16,7 @@ interface ReleaseData {
 	};
 }
 
-interface DownloadLinks {
+export interface DownloadLinks {
 	macArm: string | null;
 	macIntel: string | null;
 	windows64: string | null;

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Fragment } from "react";
 
+import { BreadcrumbSchema } from "~/components/BreadcrumbSchema";
 import { Gallery } from "~/components/Gallery";
 import { LayoutFooter } from "~/components/LayoutFooter";
 import { LayoutHeader } from "~/components/LayoutHeader";
@@ -25,10 +26,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function PressKitPage({ params }: { params: Promise<{ locale: string }> }) {
 	const { locale } = await params;
+	setRequestLocale(locale);
+	const tMeta = await getTranslations({ locale, namespace: "metadata.pressKit" });
 	const t = await getTranslations({ locale, namespace: "PressKit" });
 
 	return (
 		<Fragment>
+			<BreadcrumbSchema locale={locale} name={tMeta("title")} path="/press-kit" />
 			<LayoutHeader />
 			<main>
 				<section className="pt-[50px] px-[25px] py-[40px] lg:px-[40px] lg:py-[50px]">

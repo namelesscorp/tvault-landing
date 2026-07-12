@@ -1,8 +1,0 @@
-User-agent: *
-Allow: /
-
-Disallow: /api/
-Disallow: /_next/
-Disallow: /_vercel/
-
-Sitemap: https://tvault.app/sitemap.xml

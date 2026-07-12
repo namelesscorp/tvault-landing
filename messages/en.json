@@ -94,11 +94,11 @@
 			"title": "About the product",
 			"text": "Trust Vault is your personal data safe, designed with security, privacy, and convenience in mind. We’ve combined cutting-edge encryption technologies with a flexible approach to access management, so you can store and share data without fear of leaks.",
 			"for": {
-				"title": "Who We Built This For?",
 				"1": "Teams working with sensitive information",
 				"2": "Professionals from various fields",
 				"3": "Families who want to share important documents",
-				"4": "Anyone tired of trusting their data to cloud giants"
+				"4": "Anyone tired of trusting their data to cloud giants",
+				"title": "Who We Built This For?"
 			},
 			"cards": {
 				"1": "Our project is open source",
@@ -164,13 +164,15 @@
 			}
 		},
 		"hero": {
-			"subtitle": "Your personal data safe designed with security, privacy, and convenience in\u00a0mind",
-			"description": "Store and transmit data with confidence using reliable encrypted containers. Securely transfer data without risk — total control is\u00a0yours.",
+			"titleTop": "No cloud. No accounts.",
+			"titleAccent": "No one but you.",
+			"subtitle": "Your files stay locked on your computer, not on someone else’s servers. Keep the key yourself — or split it between people you trust, so no one can open the vault alone.",
 			"download": "Download Personal Version",
 			"learnMore": "Learn More",
-			"noSignups": "No\u00a0sign-ups",
-			"noServers": "No\u00a0servers",
-			"noInternet": "No\u00a0internet required"
+			"noSignups": "No sign-ups",
+			"noServers": "No servers",
+			"noInternet": "No internet required",
+			"featuredOn": "Featured on"
 		},
 		"capabilities": {
 			"title": "Core Capabilities",
@@ -536,10 +538,6 @@
 		},
 		"items": {
 			"titles": {
-				"reviewAllYourTech": "AllYourTech",
-				"reviewProductCool": "ProductCool",
-				"reviewScoutForge": "Scout Forge",
-				"reviewStartUpRanking": "StartUp Ranking",
 				"1": "Personal Version: Container creation",
 				"2": "Personal Version: Container",
 				"3": "Personal Version: Settings",
@@ -549,13 +547,13 @@
 				"7": "Nameless logo transparent",
 				"8": "Nameless logo",
 				"9": "Personal Version: Opening container",
-				"10": "Personal Version: Container opened"
+				"10": "Personal Version: Container opened",
+				"reviewAllYourTech": "AllYourTech",
+				"reviewProductCool": "ProductCool",
+				"reviewScoutForge": "Scout Forge",
+				"reviewStartUpRanking": "StartUp Ranking"
 			},
 			"descriptions": {
-				"reviewAllYourTech": "Trust Vault offers secure data storage and transfer with encrypted containers, multi-access control, and open-source transparency. Encrypted containers, Shamir's Secret Sharing, AES-256, standalone operation without sign-ups or servers.",
-				"reviewProductCool": "Open-source solution for creating encrypted containers and securely transferring sensitive data. Military-grade encryption with flexible access management. AES-256-GCM, PBKDF2, Shamir's Secret Sharing — from personal use to enterprise roadmap.",
-				"reviewScoutForge": "Trust Vault on Scout Forge — a platform for unbiased reviews of newly launched applications. Explore overview, design, security, and alternatives.",
-				"reviewStartUpRanking": "Trust Vault on StartUp Ranking — startup profile with rankings, metrics, and discovery for innovative products.",
 				"1": "Create a new encrypted vault for secure file storage. The container is initialized with cryptographic parameters and configured for access using share tokens or a master token.",
 				"2": "Encrypted storage for your files and folders. Access is granted only when the required number of key shares is provided, ensuring a high level of security and access control.",
 				"3": "Settings — a section for configuring the main application parameters, including the container storage path, interface language, and update management",
@@ -565,7 +563,11 @@
 				"7": "Nameless logo transparent",
 				"8": "Nameless logo",
 				"9": "Open the encrypted container and gain access to the files inside. To unlock it, access confirmation is required using share tokens or master token.",
-				"10": "View information about the opened container, edit its metadata (Name, Comment, Tags), and manage the container using the \"Open folder\", \"Save\", and \"Close\" actions."
+				"10": "View information about the opened container, edit its metadata (Name, Comment, Tags), and manage the container using the \"Open folder\", \"Save\", and \"Close\" actions.",
+				"reviewAllYourTech": "Trust Vault offers secure data storage and transfer with encrypted containers, multi-access control, and open-source transparency. Encrypted containers, Shamir's Secret Sharing, AES-256, standalone operation without sign-ups or servers.",
+				"reviewProductCool": "Open-source solution for creating encrypted containers and securely transferring sensitive data. Military-grade encryption with flexible access management. AES-256-GCM, PBKDF2, Shamir's Secret Sharing — from personal use to enterprise roadmap.",
+				"reviewScoutForge": "Trust Vault on Scout Forge — a platform for unbiased reviews of newly launched applications. Explore overview, design, security, and alternatives.",
+				"reviewStartUpRanking": "Trust Vault on StartUp Ranking — startup profile with rankings, metrics, and discovery for innovative products."
 			}
 		}
 	},

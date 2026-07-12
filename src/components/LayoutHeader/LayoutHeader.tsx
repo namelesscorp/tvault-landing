@@ -13,8 +13,8 @@ const LayoutHeader = () => {
 	const tAlt = useTranslations("alt");
 
 	return (
-		<header className="w-full z-10 px-[20px] py-[22px] lg:px-[50px] flex justify-between items-center bg-[#F5F7FF]/50 border-b border-[#E5E6EA]/60">
-			<Link href="/" className="flex items-center gap-[15px]">
+		<header className="sticky top-0 w-full z-50 px-[20px] py-[22px] lg:px-[50px] flex justify-between items-center bg-[#F5F7FF]/80 backdrop-blur-md border-b border-[#E5E6EA]/60 supports-[backdrop-filter]:bg-[#F5F7FF]/65">
+			<Link href="/" className="flex items-center gap-[15px] transition-opacity duration-300 hover:opacity-80">
 				<Image src="/logo.svg" alt={tAlt("logo")} width={60} height={60} className="rounded-[10px]" />
 				<p className="font-inter font-extrabold text-[32px] tracking-[-0.05em] text-black">Trust Vault</p>
 			</Link>
@@ -29,14 +29,14 @@ const LayoutHeader = () => {
 							<HomeAnchorLink
 								key={link.titleKey}
 								href={link.href}
-								className="font-inter font-medium text-[20px] tracking-[-0.04em] text-black/70">
+								className="font-inter font-medium text-[20px] tracking-[-0.04em] text-black/70 transition-colors duration-300 hover:text-[#3A73ED]">
 								{t(`links.navigation.${link.titleKey}`)}
 							</HomeAnchorLink>
 						) : (
 							<Link
 								key={link.titleKey}
 								href={link.href}
-								className="font-inter font-medium text-[20px] tracking-[-0.04em] text-black/70">
+								className="font-inter font-medium text-[20px] tracking-[-0.04em] text-black/70 transition-colors duration-300 hover:text-[#3A73ED]">
 								{t(`links.navigation.${link.titleKey}`)}
 							</Link>
 						),

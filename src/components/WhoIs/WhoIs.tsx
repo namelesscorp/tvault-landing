@@ -30,13 +30,13 @@ const WhoIs = async ({ locale }: { locale: string }) => {
 					<div
 						key={index}
 						className="py-[32px] px-[30px] bg-white/80 border-2 border-[#E6E7EB] rounded-[10px] transition-all duration-300 lg:hover:shadow-[0px_5px_5px_2px_rgba(0,0,0,0.1)] lg:hover:border-[#BCDBFE]">
-						<p
+						<h3
 							className={cn(
 								"font-inter font-semibold text-[24px] tracking-[-0.05em] text-black/80 lg:text-[24px] leading-[110%]",
 								locale === "ru" ? "text-[22px] leading-[110%]" : "text-[24px] leading-[110%]",
 							)}>
 							{t(`whoIs.items.${index + 1}.title`)}
-						</p>
+						</h3>
 						<p
 							className={cn(
 								"font-inter font-medium text-[16px] tracking-[-0.05em] text-black/70 lg:text-[16px] leading-[110%] mt-[20px]",
