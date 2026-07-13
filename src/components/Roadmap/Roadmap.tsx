@@ -29,7 +29,7 @@ const roadmapIcons = {
 const roadmapItemsStatuses = [
 	RoadmapStatus.COMPLETED,
 	RoadmapStatus.COMPLETED,
-	RoadmapStatus.CURRENT,
+	RoadmapStatus.COMPLETED,
 	RoadmapStatus.PLANNED,
 	RoadmapStatus.PLANNED,
 ];
