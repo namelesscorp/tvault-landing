@@ -107,7 +107,7 @@ export default async function LocaleLayout({
 		<html lang={locale}>
 			<head>
 				<GoogleAnalytics GA_MEASUREMENT_ID={process.env.GA_MEASUREMENT_ID!} />
-				<YandexMetrika YANDEX_METRIKA_ID={process.env.YANDEX_METRIKA_ID!} />
+				{locale === "ru" && <YandexMetrika YANDEX_METRIKA_ID={process.env.YANDEX_METRIKA_ID!} />}
 				<Schema locale={locale} />
 			</head>
 			<body className={`${inter.variable} antialiased`}>

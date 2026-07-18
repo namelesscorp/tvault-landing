@@ -5,7 +5,6 @@ import Link from "next/link";
 import { HomeAnchorLink } from "../HomeAnchorLink";
 import { links } from "../Links";
 import { MobileMenu } from "../MobileMenu";
-import { SelectLanguage } from "../SelectLanguage";
 import { SelectResources } from "../SelectResources";
 
 const LayoutHeader = () => {
@@ -42,7 +41,6 @@ const LayoutHeader = () => {
 						),
 					)}
 				<SelectResources />
-				<SelectLanguage />
 				<HomeAnchorLink href="#download" className="cursor-pointer">
 					<div className="flex items-center justify-center px-[20px] h-[44px] bg-[#3A73ED] rounded-[14px] hover:bg-[#3A73ED]/90 transition-all duration-300">
 						<p className="font-inter font-medium text-[20px] tracking-[-0.05em] text-[#FFFFFF] leading-[100%]">

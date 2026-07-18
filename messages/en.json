@@ -585,7 +585,7 @@
 	"CookieBanner": {
 		"title": "Cookies & Analytics",
 		"text": {
-			"line1": "We use cookies and analytics tools (Google Analytics and Yandex Metrica) to understand how visitors use our website and to improve our services.",
+			"line1": "We use cookies and analytics tools (Google Analytics) to understand how visitors use our website and to improve our services.",
 			"line2": "By continuing to use this website, you agree to the use of cookies and analytics as described in our Privacy Policy.",
 			"line3": "If you do not agree with this, please stop using the website."
 		},

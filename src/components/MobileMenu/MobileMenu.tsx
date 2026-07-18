@@ -70,20 +70,6 @@ const MobileMenu = () => {
 								</p>
 							</div>
 						</HomeAnchorLink>
-						<div className="flex items-center gap-[32px]">
-							<Link
-								href="/ru"
-								className="font-inter font-medium text-[15px] tracking-[0.007em] text-[#FFFFFF]"
-								onClick={() => setIsOpen(false)}>
-								ru
-							</Link>
-							<Link
-								href="/en"
-								className="font-inter font-medium text-[15px] tracking-[0.007em] text-[#FFFFFF]"
-								onClick={() => setIsOpen(false)}>
-								en
-							</Link>
-						</div>
 					</div>
 				</div>
 			)}

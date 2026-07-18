@@ -33,8 +33,8 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 			<LayoutHeader />
 			<main>
 				<Hero locale={locale} />
-				<Capabilities locale={locale} />
 				<Overview locale={locale} />
+				<Capabilities locale={locale} />
 				<WhoIs locale={locale} />
 				<Versions locale={locale} />
 				<Download locale={locale} />
