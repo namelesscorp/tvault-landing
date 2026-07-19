@@ -1,6 +1,6 @@
 {
 	"metadata": {
-		"title": "Trust Vault — Secure Data Storage and Transfer",
+		"title": "Trust Vault: Privacy built around you",
 		"description": "Create reliable encrypted containers, distribute access with ease, and securely transfer data without risk. Open-source solution with modern encryption algorithms.",
 		"keywords": "secure storage, encrypted file sharing, AES-256, zero-knowledge, privacy, cybersecurity, data protection, information security, open source security, secure collaboration, Shamir's Secret Sharing, passwordless access, secure cloud, data encryption, end-to-end encryption",
 		"reviews": {
@@ -164,8 +164,8 @@
 			}
 		},
 		"hero": {
-			"titleTop": "No cloud. No accounts.",
-			"titleAccent": "No one but you.",
+			"titleTop": "Privacy built around you.",
+			"titleAccent": "Stay local and private.",
 			"subtitle": "Your files stay locked on your computer, not on someone else’s servers. Keep the key yourself — or split it between people you trust, so no one can open the vault alone.",
 			"download": "Download Personal Version",
 			"learnMore": "Learn More",

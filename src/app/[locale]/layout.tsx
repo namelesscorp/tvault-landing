@@ -42,10 +42,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 		icons: {
 			icon: [
 				{ url: "/favicon.ico", sizes: "48x48" },
-				{ url: "/favicon.png", type: "image/png", sizes: "208x208" },
+				{ url: "/icon.svg", type: "image/svg+xml", sizes: "any" },
+				{ url: "/favicon.png", type: "image/png", sizes: "192x192" },
 			],
 			shortcut: "/favicon.ico",
-			apple: "/favicon.png",
+			apple: "/apple-touch-icon.png",
 		},
 		keywords: t("keywords"),
 		robots: {

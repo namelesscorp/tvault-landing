@@ -31,16 +31,16 @@ export default async function ReviewsPage({ params }: { params: Promise<{ locale
 	const t = await getTranslations({ locale, namespace: "Reviews" });
 
 	const overviewItems: IGalleryItemProps[] = [
-		{
-			title: "items.titles.reviewAllYourTech",
-			description: "items.descriptions.reviewAllYourTech",
-			image: "/gallery/logos/reviews/allyourtech.webp",
-			tags: ["review"],
-			type: "link",
-			link: "https://allyourtech.ai/ai-tools/trust-vault",
-			category: "categories.reviews",
-			date: "2025-09-16",
-		},
+		// {
+		// 	title: "items.titles.reviewAllYourTech",
+		// 	description: "items.descriptions.reviewAllYourTech",
+		// 	image: "/gallery/logos/reviews/allyourtech.webp",
+		// 	tags: ["review"],
+		// 	type: "link",
+		// 	link: "https://allyourtech.ai/ai-tools/trust-vault",
+		// 	category: "categories.reviews",
+		// 	date: "2025-09-16",
+		// },
 		{
 			title: "items.titles.reviewProductCool",
 			description: "items.descriptions.reviewProductCool",

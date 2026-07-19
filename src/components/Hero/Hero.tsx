@@ -15,7 +15,7 @@ const trustBadges = [
 	{ icon: "lock.svg", label: "AES-256" },
 ];
 
-const pressLogos = ["AllYourTech", "ProductCool", "Scout Forge", "StartUp Ranking"];
+const pressLogos = [/* "AllYourTech", */ "ProductCool", "Scout Forge", "StartUp Ranking"];
 
 const Hero = async ({ locale }: { locale: string }) => {
 	const t = await getTranslations({ locale, namespace: "HomePage" });
