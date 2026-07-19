@@ -6,7 +6,7 @@ import { BreadcrumbSchema } from "~/components/BreadcrumbSchema";
 import { LayoutFooter } from "~/components/LayoutFooter";
 import { LayoutHeader } from "~/components/LayoutHeader";
 import { cn } from "~/utils/css";
-import { buildAlternates, getBaseUrl } from "~/utils/seo";
+import { buildAlternates, buildOpenGraph, buildTwitter, getBaseUrl } from "~/utils/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
 	const { locale } = await params;
@@ -17,8 +17,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 		title: t("title"),
 		description: t("description"),
 		alternates: buildAlternates(locale, path),
-		openGraph: { url: canonicalUrl },
-		twitter: { card: "summary_large_image" },
+		openGraph: buildOpenGraph(locale, canonicalUrl),
+		twitter: buildTwitter(),
 	};
 }
 

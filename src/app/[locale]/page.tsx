@@ -11,7 +11,7 @@ import { Overview } from "~/components/Overview";
 import { Roadmap } from "~/components/Roadmap";
 import { Versions } from "~/components/Versions";
 import { WhoIs } from "~/components/WhoIs";
-import { buildAlternates, getBaseUrl } from "~/utils/seo";
+import { buildAlternates, buildOpenGraph, buildTwitter, getBaseUrl } from "~/utils/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
 	const { locale } = await params;
@@ -19,8 +19,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 	const canonicalUrl = `${getBaseUrl()}/${locale}${path}`;
 	return {
 		alternates: buildAlternates(locale, path),
-		openGraph: { url: canonicalUrl },
-		twitter: { card: "summary_large_image" },
+		openGraph: buildOpenGraph(locale, canonicalUrl),
+		twitter: buildTwitter(),
 	};
 }
 

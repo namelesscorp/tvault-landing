@@ -9,7 +9,7 @@ import { GoogleAnalytics } from "~/components/GoogleAnalytics";
 import { Schema } from "~/components/Schema";
 import { YandexMetrika } from "~/components/YandexMetrika";
 import { routing } from "~/i18n/routing";
-import { getBaseUrl } from "~/utils/seo";
+import { buildOpenGraph, buildTwitter, getBaseUrl } from "~/utils/seo";
 
 import "../globals.css";
 
@@ -40,7 +40,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 		creator: "Nameless",
 		publisher: "Nameless",
 		icons: {
-			icon: "/favicon.png",
+			icon: [
+				{ url: "/favicon.ico", sizes: "48x48" },
+				{ url: "/favicon.png", type: "image/png", sizes: "208x208" },
+			],
 			shortcut: "/favicon.ico",
 			apple: "/favicon.png",
 		},
@@ -56,31 +59,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 				"max-video-preview": -1,
 			},
 		},
-		openGraph: {
-			type: "website",
-			locale: locale === "ru" ? "ru_RU" : "en_US",
-			alternateLocale: locale === "ru" ? "en_US" : "ru_RU",
-			url: `${baseUrl}/${locale}`,
-			title,
-			description,
-			siteName: "Trust Vault",
-			images: [
-				{
-					url: "/og.jpg",
-					width: 1200,
-					height: 630,
-					alt: "Trust Vault — Secure Data Storage and Transfer",
-				},
-			],
-		},
-		twitter: {
-			card: "summary_large_image",
-			site: "@tvault_app",
-			creator: "@tvault_app",
-			title,
-			description,
-			images: ["/og.jpg"],
-		},
+		openGraph: buildOpenGraph(locale, `${baseUrl}/${locale}`),
+		twitter: buildTwitter(),
 	};
 }
 
